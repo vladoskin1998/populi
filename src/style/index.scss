@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import 'var.scss';
+
+body {
+    margin: 0;
+    font-family: "Inter", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+textarea:focus {
+    outline: none;
+}
+textarea {
+    resize: none;
+}
+a:hover,
+a:focus,
+a:active {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+input {
+    all: unset; /* Сбрасываем все стили инпута */
+    text-align: start;
+}
+
+.app {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 50px;
+}
