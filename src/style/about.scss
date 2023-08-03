@@ -1,1 +1,133 @@
 @import "var.scss";
+
+.about {
+    .title {
+        padding: 81px 0 40px 0;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: auto 1.3fr;
+        column-gap: 85px;
+        &-image {
+            background-repeat: no-repeat;
+            width: auto ;
+            height: 408.267px;
+            background-image: url("../../public/Images/about.png");
+        }
+        &-title {
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            b {
+                font-weight: 700;
+            }
+        }
+        &-subtitle {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            padding: 30px 0 30px 30px;
+        }
+        &-undertitle {
+            font-family: $font-family-comforter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-image: $gradient1;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            padding-bottom: 20px;
+        }
+    }
+    &__button {
+        padding-left: 30px;
+        display: flex;
+        column-gap: 20px;
+    }
+    &__parag {
+        padding: 60px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .about {
+        
+        &__body {
+            &-title{
+                font-size: 22px;
+            }
+            &-subtitle{
+                font-size: 16px;
+            }
+        }
+       
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .about {
+        .title {
+            padding: 71px 0 40px 0;
+        }
+        
+        &__body {
+            &-image {
+                margin: 0 auto;
+                max-width: 527.061px;
+                width: 100%;
+                height:  452.063px;
+            }
+            &-title{
+                padding-top: 70px;
+            }
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+        }
+        &__parag {
+           padding-top: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .about {
+        .title {
+            padding: 58px 0 30px 0;
+        }
+        
+        &__body {
+            &-image {
+                margin: 0 auto;
+                max-width: 527.061px;
+                width: 100%;
+                height:  240.157px;
+            }
+            &-title{
+                padding-top: 50px;
+            }
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+        }
+        &__parag {
+           padding-top: 40px;
+        }
+        &__button{
+            row-gap: 20px;
+            flex-direction: column;
+        }
+    }
+}

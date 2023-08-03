@@ -5,8 +5,6 @@ import FooterList from './FooterList'
 const Footer = () => {
 
     const [open, setOpen] = useState(false)
-    console.log(open);
-    
 
     return (
         <div className='footer'>

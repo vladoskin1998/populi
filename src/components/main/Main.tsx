@@ -1,8 +1,14 @@
 import React from 'react'
-
+import { Circles } from './Circles'
+import { Letter } from './Letter'
 const Main = () => {
   return (
-    <div>Main</div>
+    <div>
+      
+
+    <Circles />
+    <Letter />
+    </div>
   )
 }
 

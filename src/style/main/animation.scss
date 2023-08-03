@@ -1,0 +1,30 @@
+#circle1,
+#circle3 {
+  animation: rotateplus 150s ease infinite;
+  transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
+}
+
+#circle2{
+  animation: rotateminus 150s ease infinite;
+  transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
+}
+
+@keyframes rotateplus {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  @keyframes rotateminus {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  

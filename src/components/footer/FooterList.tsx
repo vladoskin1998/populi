@@ -13,8 +13,8 @@ const url = [
     '/',
     'about',
     'contacts',
-    'agreement',
-    '/'
+    '/',
+    'agreement'
 ]
 
 
