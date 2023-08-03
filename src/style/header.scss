@@ -14,10 +14,7 @@
     &__button-app {
         margin-right: 50px;
         border-radius: 40px;
-        background: var(
-            --gr,
-            linear-gradient(135deg, #0014ff 0%, #ff2cdf 100%)
-        );
+        background: $gradient1;
         display: inline-flex;
         height: 40px;
         padding: 2px 28px;
@@ -98,6 +95,9 @@
         }
         &__burger {
             display: block;
+            &-button{
+                display: none;
+            }
         }
         &__nav {
             display: none;

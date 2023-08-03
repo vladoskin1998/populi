@@ -3,14 +3,15 @@ import Main from '../main/Main'
 import About from '../about/About'
 import Contacts from '../contacts/Contacts'
 import Agreement from '../agreement/Agreement'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
+import Footer from '../footer/Footer'
 
 const App = () => {
   return (
     <div className='app'>
       <Router>
-      <Header />
+        <Header />
         <Routes>
           <Route path="/" element={
             <Main />
@@ -18,13 +19,14 @@ const App = () => {
           <Route path="/about" element={
             <About />
           } />
-          <Route path="/contacs" element={
+          <Route path="/contacts" element={
             <Contacts />
           } />
           <Route path="/agreement" element={
             <Agreement />
           } />
         </Routes>
+        <Footer />
       </Router >
     </div >
   )

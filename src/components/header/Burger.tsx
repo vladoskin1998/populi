@@ -9,9 +9,9 @@ const Burger = () => {
 
     return (
         <div className='header__burger'>
-            <div className='header__burger-logo' onClick={() => setOpen(true)}>
+            <button className='header__burger-logo' onClick={() => setOpen(true)}>
                 <BurgerLogo />
-            </div>
+            </button>
             {
                 open ?
                     <div className='header__burger-modal'>

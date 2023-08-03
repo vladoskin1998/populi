@@ -1,0 +1,200 @@
+@import "var.scss";
+
+.contacts {
+    padding: 80px 0;
+    &__container {
+        max-width: 1360px;
+        margin: 0 auto;
+        padding: 0px 40px;
+    }
+    &__subtitle {
+        padding-top: 30px;
+        padding-bottom: 70px;
+        max-width: 831px;
+        width: 100%;
+
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr;
+        &-body {
+            position: relative;
+            border: 1px solid transparent;
+            border-radius: 24px;
+            background: white;
+            background-clip: padding-box;
+            padding: 44px 95px 52px 40px;
+            &::after {
+                position: absolute;
+                top: -1px;
+                bottom: -1px;
+                left: -1px;
+                right: -1px;
+                background: $gradient1;
+                content: "";
+                z-index: -1;
+                border-radius: 24px;
+            }
+            &-title {
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 1.5px;
+                padding-bottom: 20px;
+            }
+            &-subtitle {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px;
+            }
+        }
+        &_inputs {
+            display: grid;
+            grid-template-areas:
+                "a b"
+                "c c";
+            grid-template-rows: auto auto;
+            column-gap: 30px;
+            row-gap: 22px;
+            &-a {
+                grid-area: a;
+            }
+            &-b {
+                grid-area: b;
+            }
+            &-c {
+                grid-area: c;
+            }
+            & input {
+                padding: 10px 0;
+                height: 44px;
+                border-bottom: 1px solid #232323;
+            }
+            padding-bottom: 30px;
+        }
+        &-info {
+            position: relative;
+            &-body {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                position: absolute;
+                top: 44px;
+                left: -40px;
+                width: calc(100% + 40px);
+                background: $gradient1;
+                border-radius: 24px;
+                padding: 44px 40px 44px 73px;
+            }
+            &-item {
+                display: grid;
+                grid-template-areas:
+                    ". a"
+                    "b c";
+                grid-template-columns: auto 1fr;
+                column-gap: 20px;
+                &-a {
+                    grid-area: a;
+                    color: $color_grey;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 28px;
+                }
+                &-b {
+                    grid-area: b;
+                    line-height: 28px;
+                }
+                &-c {
+                    grid-area: c;
+                    color: #ffffff;
+                    line-height: 28px;
+                }
+            }
+        }
+        &-button {
+            height: 40px;
+            color: #ffffff;
+            border-radius: 40px;
+            background: $gradient1;
+            padding: 2px 28px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .contacts__form_inputs {
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts__container {
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .contacts__container {
+        padding: 0 25px;
+    }
+    .contacts__subtitle {
+        padding-bottom: 15px;
+    }
+    .contacts__form {
+        grid-template-columns: auto;
+
+        .contacts__form-body {
+            order: 2;
+            padding: 72px 40px 52px 40px;
+        }
+        .contacts__form-info {
+            height: 281px;
+            order: 1;
+        }
+
+        .contacts__form-info-body {
+            top: auto;
+            height: 290px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: calc(100% - 88px);
+            bottom: -44px;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .contacts__container {
+        padding: 0 1px;
+    }
+    .contacts {
+        .title {
+            padding: 0px 15px;
+        }
+    }
+
+    .contacts__subtitle {
+        padding: 30px 15px 10px 15px;
+    }
+    .contacts__form {
+        .contacts__form-info-body {
+            height: 312px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: calc(100% - 30px);
+            bottom: -44px;
+            br  {
+                display: block;
+            }
+        }
+        
+    }
+}
