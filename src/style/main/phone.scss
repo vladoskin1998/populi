@@ -1,0 +1,26 @@
+.phone {
+    position: fixed;
+    top: 91px;
+    right: 150px;
+    width: 282px;
+    height: 574px;
+    z-index: 5;
+    &--circle {
+        position: absolute;
+        top: calc(-91px + 50vh);
+        left: calc(-1 * (100vw / 2 + 470px));
+        transform: translate(50%, -50%);
+        z-index: 3;
+    }
+    &__screen {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        width: 307px;
+        height: 624px;
+        background-repeat: no-repeat;
+        background-image: url("../../../public/Images/phone.png");
+    }
+  
+}

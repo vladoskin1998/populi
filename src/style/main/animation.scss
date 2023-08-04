@@ -1,3 +1,15 @@
+.circle{
+  position: relative;
+  height: 960px;
+  width: 960px;
+  &__logo{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 #circle1,
 #circle3 {
   animation: rotateplus 150s ease infinite;
@@ -8,6 +20,13 @@
   animation: rotateminus 150s ease infinite;
   transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
 }
+
+
+.circle4{
+  opacity: 0;
+  r: 0;
+}
+ 
 
 @keyframes rotateplus {
     from {
@@ -28,3 +47,115 @@
     }
   }
   
+
+
+
+
+//////////////////////Letter
+
+
+
+@keyframes expandWidth {
+  from {
+    height: 160px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+.letter{
+  width: 70px;
+  overflow: hidden;
+  height: 70px;
+}
+
+
+.rect{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 180px;
+  height: 0px;
+  background-color: rgb(238,232,255);
+  transform: rotate(242deg);
+  overflow: hidden;
+  animation: expandWidth 3s linear;
+
+}
+
+ 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  animation: fadeOut 1s forwards 1s;
+}
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    r: 10;
+  }
+  100% {
+    opacity: 1;
+    r: 310;
+  }
+}
+
+
+.show{
+  animation: fadeIn 2s linear forwards;
+}
+
+
+
+@keyframes movecircle {
+  0% {
+    top: calc(-91px + 50vh);
+    left: calc(-1* (100vw/2 + 470px));
+    transform: translate(50%, -50%);
+    opacity: 1;
+    z-index: 3;
+  } 
+  30% {
+    top: calc(-91px + 60vh);
+    opacity: 0.7;
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.phone--circle-move{
+  animation: movecircle 1.5s ease forwards;
+}
+
+@keyframes appopacity {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.app--opacity{
+  animation: appopacity 1s ease forwards;
+}

@@ -1,0 +1,110 @@
+@import "../var.scss";
+
+.main {
+    &--uptitle {
+        font-family: $font-family-comforter;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-image: $gradient1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    &__invite {
+        padding: 90px 0 143px 0;
+        max-width: 500px;
+        width: 100%;
+
+        &-title {
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            padding-left: 57px;
+        }
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            height: 48px;
+            padding: 18px 42px;
+            white-space: nowrap;
+        }
+        &-parag {
+            text-align: justify;
+            opacity: 0.7;
+        }
+    }
+
+    &__categories {
+        position: relative;
+        padding-bottom: 181px;
+        .title {
+            padding-left: 57px;
+            padding-bottom: 279px;
+        }
+        &--general {
+            position: absolute;
+            background-repeat: no-repeat;
+        }
+        &-parag {
+            padding-left: 57px;
+            font-weight: 400;
+            line-height: 24px; /* 171.429% */
+            letter-spacing: 0.7px;
+            opacity: 0.7;
+            width: 283px;
+        }
+        &-1 {
+            background-image: url("../../../public/Images/num1.png");
+            width: 221px;
+            height: 224px;
+            top: 216px;
+            left: 68px;
+        }
+        &-2 {
+            background-image: url("../../../public/Images/num2.png");
+            width: 166px;
+            height: 171px;
+            top: 110px;
+            left: 311px;
+        }
+        &-3 {
+            background-image: url("../../../public/Images/num3.png");
+            width: 268px;
+            height: 250px;
+            top: 50px;
+            left: 470px;
+        }
+        &-4 {
+            background-image: url("../../../public/Images/num4.png");
+            width: 186px;
+            height: 205px;
+            top: 310px;
+            left: 287px;
+        }
+        &-5 {
+            background-image: url("../../../public/Images/num5.png");
+            width: 180px;
+            height: 197px;
+            top: 280px;
+            left: 500px;
+        }
+    }
+
+    &__site {
+        &-line {
+            position: absolute;
+            background-image: url("../../../public/Images/site.png");
+            background-size: cover;
+            right: 165px;
+            top: 103px;
+            width: 256px;
+            height: 1217px;
+            z-index: 5;
+        }
+    }
+}

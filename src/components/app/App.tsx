@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import Main from '../main/Main'
 import About from '../about/About'
 import Contacts from '../contacts/Contacts'
@@ -6,8 +6,12 @@ import Agreement from '../agreement/Agreement'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
+import "../../style/main/main.scss"
+import "../../style/main/animation.scss"
 
 const App = () => {
+
+
     return (
         <div className='app'>
             <Router>

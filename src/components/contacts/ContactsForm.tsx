@@ -17,7 +17,7 @@ const ContactsForm = () => {
                     <input type="text" className='contacts__form_inputs-b'placeholder='Email'/>
                     <input type="text" className='contacts__form_inputs-c'placeholder='Question'/>
                 </div>
-                <button className='contacts__form-button'>Send message</button>
+                <button className='contacts__form-button button__grad'>Send message</button>
             </div>
            <ContactsInfo />
         </div>
