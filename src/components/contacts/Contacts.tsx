@@ -1,17 +1,27 @@
+import { useEffect } from 'react';
 import '../../style/contacts.scss'
 import ContactsForm from './ContactsForm'
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
+
+    const { t } = useTranslation();
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 0);
+    }, [])
+
     return (
         <div className='contacts'>
             <div className='contacts__container'>
                 <h3 className='title'>
-                    <h3>Look around you</h3>
-                    <h3>Everything is changing.</h3>
+                    <h3>{t('contacts.t1')}</h3>
+                    <h3>{t('contacts.t2')}</h3>
                 </h3>
                 <h4 className='contacts__subtitle'>
-                    What if the time has come for you to change? Starting a collaboration is easy! Order a free
-                    consultation or call back. We are always in touch and happy to cooperate with you
+                {t('contacts.t3')}
+                {t('contacts.t4')}
                 </h4>
                 <ContactsForm />
             </div>

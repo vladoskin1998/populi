@@ -1,0 +1,52 @@
+{
+    "header":{
+       "t1": "Home | Our categories | Create events | New friends | About Us",
+       "t2": "Applications"
+    },
+    "footer":{
+        "t1": "Home | About | Contacts | Privacy policy | Terms Of Use"
+    },
+    "about": {
+        "t1": "About Populi",
+        "t2": "Populi",
+        "t3":  "is a pocket event-based coffeehouse. We created Populi to connect people who share common interests, and to provide the ",
+        "t4": "best possible communication experience.",
+        "t5":  "We made Populi not just another meeting app but a powerful tool for creating various events based on people's interests and personalities. Our engineers and designers work constantly to improve Populi customers' experience, and we would be glad to see your feedback.",
+        "t6":  "Your portable events manager",
+        "t7":  "Populi is an application that will make organizing meetings and finding events more convenient and efficient. Whether you're looking to meet up with friends or join exciting events, Populi will help you turn your ideas into reality. Don't miss the opportunity to be connected with those who share your interests!",
+        "t8":  "We believe that Populi will become your indispensable tool for organizing meetings and events. It will help you save time, coordinate attendees, facilitate scheduling and take part in interesting activities. Don't miss the opportunity to create unforgettable meetings with Populi!"
+    },
+    "contacts": {
+        "t1": "Look around you",
+        "t2": "Everything is changing.",
+        "t3": "What if the time has come for you to change? Starting a collaboration is easy! Order a free",
+         "t4": "consultation or call back. We are always in touch and happy to cooperate with you",
+         "t5": "If you have questions pleasecontact us",
+         "t6": "Fill in the fields and our specialists will quickly contact you to resolve your issues",
+         "t7": "Name",
+         "t8": "Email",
+        "t9": "Question",
+        "t10": "Send message",
+        "t11": "HEAD OFFICE:",
+        "t12": "El-Mahalla El-Kubra 371776",
+        "t13": "Damietta Egypt",
+        "t14": "PHONES:",
+        "t15": "WRITE US:"
+        
+    },
+    "agreement": {
+        "t1":"Properties for Sale"
+    
+    },
+    "main": {
+        "title": "Reviews",
+        "main": "Happy Clients",
+        "foot": "Thanks to you we are becoming better!",
+        "viewmore": "View more",
+        "leavereview": "Leave a review",
+        "name": "Your name",
+        "comment":"Your review",
+        "alert-name": "Field name is empty",
+        "alert-comment":"Review field is empty"
+    }
+  }

@@ -1,12 +1,29 @@
-import React from 'react'
+import { useEffect, useState } from "react"
 
-const MainCategories = () => {
+
+const MainCategories = ({ isAnimation }: { isAnimation: boolean }) => {
+
+    useEffect(() => {
+        const main__invitetitle = document.querySelectorAll('.main__categories-title-text');
+
+        setTimeout(() => {
+            main__invitetitle.forEach((element) => {
+                element?.classList.add('title--animation');
+            })
+        }, 4000);
+})
+
     return (
         <div className='main__categories'>
             <h4 className='main--uptitle'>How hard can it be</h4>
-            <h3 className='title'>Numbers of events <br />
-                by categories
-            </h3>
+            <div className='main__categories-title'>
+                <h3 className='title main__categories-title-text' style={{ fontSize: "40px" }}>Numbers of events
+
+                </h3>
+                <h3 className='title main__categories-title-text' style={{ fontSize: "50px" }}>  by categories
+
+                </h3>
+            </div>
             <div className='main__categories--general main__categories-1' />
             <div className='main__categories--general main__categories-2' />
             <div className='main__categories--general main__categories-3' />

@@ -1,27 +1,46 @@
+import { useEffect } from 'react'
 import '../../style/about.scss'
 import AboutButton from './AboutButton'
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+
+    const { t } = useTranslation();
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 0);
+    }, [])
+
+    // const { t } = useTranslation();
+    // const list = t("about.submain").split('|')
+
     return (
         <div className='about'>
             <div className='container__wraper'>
                 <h3 className='title'>
-                    About Populi
+                    {t('about.t1')}
                 </h3>
                 <div className='about__body'>
                     <div className='about__body-image'></div>
                     <div className='about__body-text'>
-                        <div className='about__body-title'> <b>Populi</b> is a pocket event-based coffeehouse. We created Populi to connect people who share common interests, and to provide the <b>best possible communication experience.</b> </div>
-                        <div className='about__body-subtitle'>We made Populi not just another meeting app but a powerful tool for creating various events based on people's interests and personalities. Our engineers and designers work constantly to improve Populi customers' experience, and we would be glad to see your feedback.</div>
-                        <h4 className='about__body-undertitle'>Your portable events manager</h4>
+                        <div className='about__body-title'>
+                            <b> {t('about.t2')}</b>
+                            {t('about.t3')}
+                            <b> {t('about.t4')}</b>
+                        </div>
+                        <div className='about__body-subtitle'> {t('about.t5')}</div>
+                        <h4 className='about__body-undertitle'> {t('about.t6')}</h4>
                         <AboutButton />
                     </div>
                 </div>
                 <div className='about__parag'>
                     <p>
-                        Populi is an application that will make organizing meetings and finding events more convenient and efficient. Whether you're looking to meet up with friends or join exciting events, Populi will help you turn your ideas into reality. Don't miss the opportunity to be connected with those who share your interests!
+                        {t('about.t7')}
                     </p>
                     <p>
-                        We believe that Populi will become your indispensable tool for organizing meetings and events. It will help you save time, coordinate attendees, facilitate scheduling and take part in interesting activities. Don't miss the opportunity to create unforgettable meetings with Populi!
+                        {t('about.t8')}
                     </p>
                 </div>
 

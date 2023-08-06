@@ -1,4 +1,20 @@
-export const Letter = () => {
+import { useEffect } from "react";
+import "../../style/main/letter.scss"
+
+export const Letter = ({ isAnimation }: { isAnimation: boolean }) => {
+
+    useEffect(() => {
+        const letterElement = document.querySelector('.letter');
+   
+        if (isAnimation) {
+          setTimeout(() => {
+            letterElement?.classList.add('hidden');
+          }, 3000);
+        }
+        else{
+          letterElement?.classList.add('hidden--withot-animation');
+        }
+      }, []);
 
     return (
         <div className='letter' style={{ position: 'relative' }}>
@@ -27,7 +43,7 @@ export const Letter = () => {
                     </defs>
                 </svg>
             </div>
-            <div className='rect' />
+            <div className='letter--rect' />
             <div style={{ position: 'absolute', left: 0, top: 0 }}>
                 <svg style={{ width: '70px', height: '70px' }} xmlns="http://www.w3.org/2000/svg" width="100" height="86" viewBox="0 0 100 86" fill="none">
                     <mask id="path-1-inside-1_594_6596" fill="white">

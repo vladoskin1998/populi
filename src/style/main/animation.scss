@@ -1,161 +1,146 @@
-.circle{
-  position: relative;
-  height: 960px;
-  width: 960px;
-  &__logo{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-#circle1,
-#circle3 {
-  animation: rotateplus 150s ease infinite;
-  transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
-}
-
-#circle2{
-  animation: rotateminus 150s ease infinite;
-  transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
-}
-
-
-.circle4{
-  opacity: 0;
-  r: 0;
-}
- 
-
-@keyframes rotateplus {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-
-  @keyframes rotateminus {
-    from {
-      transform: rotate(360deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
-  }
-  
-
-
-
-
-//////////////////////Letter
-
-
-
-@keyframes expandWidth {
-  from {
-    height: 160px;
-  }
-  to {
-    height: 0px;
-  }
-}
-
-.letter{
-  width: 70px;
-  overflow: hidden;
-  height: 70px;
-}
-
-
-.rect{
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 180px;
-  height: 0px;
-  background-color: rgb(238,232,255);
-  transform: rotate(242deg);
-  overflow: hidden;
-  animation: expandWidth 3s linear;
-
-}
-
- 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.hidden {
-  animation: fadeOut 1s forwards 1s;
-}
-
-
+@import "../var.scss";
 
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    r: 10;
-  }
-  100% {
+    0% {
+        opacity: 0;
+        r: 10;
+    }
+    100% {
+        opacity: 1;
+        r: 310;
+    }
+}
+
+.show {
+    animation: fadeIn 2s linear forwards;
+}
+.show--withot-animation {
     opacity: 1;
     r: 310;
-  }
 }
 
-
-.show{
-  animation: fadeIn 2s linear forwards;
-}
-
-
-
-@keyframes movecircle {
+@keyframes move__to__phone__circle {
   0% {
     top: calc(-91px + 50vh);
-    left: calc(-1* (100vw/2 + 470px));
+    left: calc(-1 * (100vw / 2 + 470px));
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
     opacity: 1;
     z-index: 3;
-  } 
-  30% {
-    top: calc(-91px + 60vh);
-    opacity: 0.7;
-    z-index: 2;
-  }
-  100% {
+    }
+    30% {
+        top: calc(-91px + 60vh);
+        opacity: 0.7;
+        z-index: 2;
+    }
+    100% {
+        z-index: 2;
+        opacity: 1;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.phone--circle-move {
+    animation: move__to__phone__circle 1s ease forwards;
+}
+.phone--circle-move--withot-animation {
     z-index: 2;
     opacity: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
 }
 
 
-.phone--circle-move{
-  animation: movecircle 1.5s ease forwards;
+@keyframes app__opacity__elem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@keyframes appopacity {
+.app--opacity {
+    animation: app__opacity__elem 3s ease forwards;
+}
+.app--opacity--withot-animation {
+    opacity: 1;
+}
+
+@keyframes title__animation {
+    0% {
+        color: transparent;
+        background-size: 0% 95%;
+        -webkit-background-size:  0% 95%;
+        background-position: left;
+    }
+    10% {
+      color: transparent;
+      background-size: 10% 95%;
+      -webkit-background-size:  10% 95%;
+      background-position: left;
+    }
+    40% {
+        color: transparent;
+        background-size: 100% 95%;
+        -webkit-background-size:  100% 95%;
+        background-position: left;
+    }
+    60% {
+        color: $color_black; 
+        background-size: 100% 95%;
+        background-position: right;
+        -webkit-background-size:  100% 95%;
+    }
+    90% {
+        background-size: 10% 95%;
+        background-position: right;
+        -webkit-background-size:  10% 95%;
+    }
+    100% {
+        color: $color_black;
+        background-size: 0% 95%;
+        -webkit-background-size:  0% 95%;
+        background-position: right;
+    }
+}
+
+.title--animation {
+    animation: title__animation 1.5s ease-in forwards;
+}
+
+
+@keyframes move__circle__to__right__app {
   0% {
-    opacity: 0;
-
+    margin-left: 0;
   }
   100% {
-    opacity: 1;
+    margin-left: 900px;
   }
 }
 
-.app--opacity{
-  animation: appopacity 1s ease forwards;
+.move--to--right{
+  animation: move__circle__to__right__app 1.5s ease-in forwards;
+}
+
+
+
+@keyframes phone__move__right{
+  0% {
+   transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300px);
+  }
+}
+
+.phone__move__right{
+  animation: phone__move__right 1.5s ease-in forwards;
 }

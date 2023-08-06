@@ -33,6 +33,12 @@
         display: flex;
         column-gap: 20px;
         cursor: pointer;
+        li {
+            transition: color 0.5s, color 0.5s;
+            &:hover {
+                color: $color_purp;
+            }
+        }
     }
     &__select {
         position: relative;
@@ -111,6 +117,7 @@
 
 @media only screen and (max-width: 1080px) {
     .header {
+            opacity: 1;
         .container {
             padding: 0 25px;
         }
@@ -119,6 +126,7 @@
 
 @media only screen and (max-width: 665px) {
     .header {
+        opacity: 1;
         .container {
             padding: 0 15px;
         }

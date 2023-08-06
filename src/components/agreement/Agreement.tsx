@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../../style/agreement.scss'
+import { useTranslation } from 'react-i18next';
+
+
+
+   
+
 
 const Agreement = () => {
+
+    const { t } = useTranslation();
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 0);
+    }, [])
+
     return (
         <div className='agreement'>
             <div className='container__wraper'>
                 <h3 className='title'>
-                    Terms of Use Agreement
+                    {t('agreement.t1')}
                 </h3>
                 <div>
 

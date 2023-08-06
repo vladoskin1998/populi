@@ -13,6 +13,7 @@
         z-index: 3;
     }
     &__screen {
+        opacity: 0;
         position: absolute;
         left: 0;
         top: 0;
@@ -21,6 +22,10 @@
         height: 624px;
         background-repeat: no-repeat;
         background-image: url("../../../public/Images/phone.png");
+    }
+    &__block{
+        position: absolute;
+        bottom: 0;
     }
   
 }

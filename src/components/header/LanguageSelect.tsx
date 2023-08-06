@@ -1,19 +1,23 @@
 import React, { useState } from 'react'
 import { LanguageType } from '../../types/types'
 import { LANGUAGES as list } from '../../utils/const'
-
+import { useTranslation } from 'react-i18next';
 const lang = ['en', 'ua', 'ru']
+
 
 const LanguageSelect = () => {
 
     const [open, setOpen] = useState(false)
     const [lang, setLang] = useState<LanguageType[]>(list)
+    const { i18n } = useTranslation();
+
 
     const chageLang = (elem: LanguageType) => {
         setLang(
             s => ([elem, ...s.filter(it => elem !== it)])
         )
         setOpen(false)
+        i18n.changeLanguage(elem);
     }
 
 

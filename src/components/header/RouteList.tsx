@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-
-const route = ['Home', 'Our categories', 'Create events', 'New friends', 'About Us']
+import { useTranslation } from 'react-i18next';
 
 const RouteList = () => {
+
+    const { t } = useTranslation();
+    const route = t("header.t1").split('|')
+
     return (
         <>
             {
                 <ul className='header__list'>
                     {
-                        route.map((r, index) =>
+                        route?.map((r:string, index:number) =>
                             <li>
                                 {r}
                                 {/* <Link to={r}>{route[index]}</Link> */}

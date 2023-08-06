@@ -1,17 +1,19 @@
 
 
 import { Letter } from './Letter'
+import { useEffect, useState } from 'react';
+import Points  from './Points'
+import "../../style/main/circle.scss"
 
-export const Circles = () => {
-
+export const Circles = ({ isAnimation }: { isAnimation: boolean }) => {
  
     return (
         <div className='circle'>
+            <Points isAnimation = { isAnimation }/>
             <div className='circle__logo'>
-                  <Letter />
+                  <Letter isAnimation = { isAnimation }/>
             </div>
-          
-            <svg width="960" height="960" viewBox="0 0 1448 1448" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className='circle__svg' width="960" height="960" viewBox="0 0 1448 1448" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle id="circle1" opacity="0.1" cx="724" cy="724" r="723" stroke="url(#paint0_linear_7_55)" stroke-width="2" stroke-dasharray="30 30" />
                 <circle id="circle2" opacity="0.3" cx="724" cy="724" r="547" stroke="url(#paint1_linear_7_55)" stroke-width="2" stroke-dasharray="20 20" />
                 <circle id="circle3" opacity="0.6" cx="724" cy="724" r="409" stroke="url(#paint2_linear_7_55)" stroke-width="2" stroke-dasharray="10 10" />

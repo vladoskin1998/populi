@@ -1,13 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-const list = [
-    'Home',
-    'About',
-    'Contacts',
-    'Privacy policy',
-    'Terms Of Use'
-]
+import { useTranslation } from 'react-i18next';
 
 const url = [
     '/',
@@ -19,10 +12,13 @@ const url = [
 
 
 const FooterList = () => {
+    const { t } = useTranslation();
+    const list = t("footer.t1").split('|')
+
     return (
         <ul className='footer__list'>
             {
-                list.map((item, index) => <li>
+                list.map((item:string, index:number) => <li>
                     <Link to={url[index]}>
                         {item}
                     </Link>
