@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
-import Main from '../main/Main'
-import About from '../about/About'
-import Contacts from '../contacts/Contacts'
-import Agreement from '../agreement/Agreement'
+import { useEffect, useRef, useState, Suspense, lazy } from 'react'
+import Loader from '../loader.tsx/Loader'
+
+
+
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
@@ -12,6 +12,11 @@ import "../../style/main-tp/main-tp.scss"
 import MainTP from '../main-tablet-phone/MainTP'
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/i18n';
+
+const Main = lazy(() => import('../main/Main'));
+const About = lazy(() => import('../about/About'));
+const Contacts = lazy(() => import('../contacts/Contacts'));
+const Agreement = lazy(() => import('../agreement/Agreement'));
 
 const App = () => {
 
@@ -33,8 +38,6 @@ const App = () => {
     useEffect(() => {
 
         appRef.current = document.querySelector('.app')
-        console.log(appRef);
-
 
         setTimeout(() => {
             window.scrollTo(0, 0);
@@ -46,18 +49,15 @@ const App = () => {
 
         setTimeout(() => {
             appRef!.current!.style!.background = 'transparent'
-        }, 3500)
+        }, 3000)
 
-        setTimeout(() => {
-            document.body.style.overflowY = 'scroll';
-
-            setAnimation(false)
-        }, 6000);
+      
     }, []);
 
 
     return (
         <div className='app'>
+            <Suspense fallback={<Loader />}>
             <I18nextProvider i18n={i18n}>
                 <Router>
                     <Header />
@@ -82,6 +82,7 @@ const App = () => {
                     <Footer />
                 </Router >
             </I18nextProvider>
+            </Suspense>
         </div >
     )
 }

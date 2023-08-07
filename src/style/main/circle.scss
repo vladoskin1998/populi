@@ -19,98 +19,15 @@
 }
 
 .circle {
-    position: relative;
+    position: fixed;
     height: 960px;
     width: 960px;
-    margin: 0;
-    &__logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    &__poins {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    &--body{
         position: relative;
-        &-wrap {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    &__point1 {
-        //opacity: 0;
-      
-        & > div:nth-child(1) {
-            position: absolute;
-            top: 752px;
-            left: 644px;
-            background-image: url('../../../public/Images/point1.png');
-        }
-        & > div:nth-child(2) {
-            top: 290px;
-            left: 682px;
-            position: absolute;
-            background-image: url('../../../public/Images/point2.png');
-        }
-        & > div:nth-child(3) {
-            top: 322px;
-            left: 215px;
-            position: absolute;
-            background-image: url('../../../public/Images/point3.png');
-        }
-
-        & > div:nth-child(4) {
-            top: 184px;
-            left: 200px;
-            position: absolute;
-            background-image: url('../../../public/Images/point4.png');
-        }
-        & div{
-            width: 38px;
-            height: 40px;
-            background-repeat: no-repeat;
-            object-fit: contain;
-            background-size: 100% 0;
-            background-position: right bottom;
-            -webkit-background-size: 100% 0%;
-        }
-    }
-
-    &__point2 {
-           & > div:nth-child(1) {
-            top: 482px;
-            left: 97px;
-            position: absolute;
-            background-image: url('../../../public/Images/point1.png');
-        }
-        & > div:nth-child(2) {
-            position: absolute;
-            top: 700px;
-            left: 54px;
-            background-image: url('../../../public/Images/point2.png');
-        }
-        & > div:nth-child(3) {
-            top: 524px;
-            left: 719px;
-            position: absolute;
-            background-image: url('../../../public/Images/point3.png');
-        }
-        & > div:nth-child(4) {
-            top: 69px;
-            left: 450px;
-            position: absolute;
-            background-image: url('../../../public/Images/point4.png');
-        }
-        & div{
-            width: 38px;
-            height: 40px;
-            background-repeat: no-repeat;
-            object-fit: contain;
-            background-size: 100% 0;
-            background-position: right bottom;
-            -webkit-background-size: 100% 0%;
-        }
     }
 }
 
@@ -130,41 +47,3 @@
     r: 0;
 }
 
-@keyframes points1__scale {
-    0% {
-        background-size: 100% 0%;
-        -webkit-background-size:  100% 0%;
-        background-position: right bottom;
-    }
-    100% {
-        background-size: 100% 100%;
-        -webkit-background-size:  100% 100%;
-        background-position: right bottom;
-    }
-}
-
-.circle__point1__animation {
-    animation: points1__scale ease-in 1s forwards;
-}
-
-@keyframes points2__scale {
-    0%, 100% {
-        background-size: 100% 0%;
-        -webkit-background-size: 100% 0%;
-        background-position: right bottom;
-    }
-    5% {
-        background-size: 100% 100%;
-        -webkit-background-size: 100% 100%;
-        background-position: right bottom;
-    }
-    95% {
-        background-size: 100% 100%;
-        -webkit-background-size: 100% 100%;
-        background-position: right bottom;
-    }
-}
-
-.circle__point2__animation {
-    animation: points2__scale 12s infinite;
-}

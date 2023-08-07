@@ -1,0 +1,89 @@
+.poitns {
+    position: relative;
+    width: 960px;
+    height: 960px;
+}
+.points_point {
+    &--generall {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+    }
+    &-1 {
+        background-image: url("../../../public/Images/point1.png");
+    }
+    &-2 {
+        background-image: url("../../../public/Images/point2.png");
+    }
+    &-3 {
+        background-image: url("../../../public/Images/point3.png");
+    }
+    &-4 {
+        background-image: url("../../../public/Images/point4.png");
+    }
+
+    &-xy1 {
+        top: 80%;
+        left: 64%;
+    }
+    &-xy2 {
+        top: 32%;
+        left: 72%;
+    }
+    &-xy3 {
+        top: 13%;
+        left: 10%;
+    }
+    &-xy4 {
+        top: 50%;
+        left: 76%;
+    }
+
+    &-xy5 {
+        top: 20%;
+        left: 20%;
+    }
+    &-xy6 {
+        top: 19%;
+        left: 40%;
+    }
+    &-xy7 {
+        top: 70%;
+        left: 34%;
+    }
+    &-xy8 {
+        top: 60%;
+        left: 13%;
+    }
+}
+//opacity: 0;
+
+
+@keyframes points1__scale {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.circle__point1__animation {
+    animation: points1__scale ease-in 1s forwards;
+}
+
+@keyframes points2__scale {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.circle__point2__animation {
+    animation: points2__scale 12s infinite;
+}

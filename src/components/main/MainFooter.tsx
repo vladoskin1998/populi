@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainFooter = () => {
   return (
-    <div>MainFooter</div>
+    <div id='MainFooter' style={{height: "70vh"}}>MainFooter</div>
   )
 }
 

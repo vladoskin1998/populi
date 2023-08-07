@@ -4,7 +4,7 @@ import { Circles } from '../main-animation/Circles'
 const MainTP = () => {
   return (
     <div>
-        <Circles isAnimation ={true}/>
+        {/* <Circles isAnimation ={true}/> */}
     </div>
   )
 }

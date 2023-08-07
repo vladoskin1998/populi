@@ -1,0 +1,76 @@
+.main__diff {
+    .main__categories-title {
+        padding-bottom: 0;
+    }
+    padding-bottom: 443px;
+    &-img {
+        position: relative;
+        div {
+            position: absolute;
+        }
+        &-1 {
+            background-image: url("../../../public/Images/user1.png");
+            width: 195px;
+            height: 195px;
+            top: -110px;
+            left: 12%;
+        }
+        &-2 {
+            background-image: url("../../../public/Images/user2.png");
+            width: 208px;
+            height: 208px;
+            top: -134px;
+            left: 22%;
+        }
+        &-3 {
+            background-image: url("../../../public/Images/user3.png");
+            width: 163px;
+            height: 163px;
+            top: 20px;
+            left: 10%;
+        }
+        &-4 {
+            background-image: url("../../../public/Images/user4.png");
+            width: 241px;
+            height: 241px;
+            top: 105px;
+            left: 16%;
+        }
+        &-5 {
+            background-image: url("../../../public/Images/user5.png");
+            width: 163px;
+            height: 163px;
+            top: 38px;
+            left: 27%;
+        }
+
+        &-6 {
+            background-image: url("../../../public/Images/user6.png");
+            width: 147px;
+            height: 147px;
+            top: 0px;
+            left: 10%;
+        }
+        &-7 {
+            background-image: url("../../../public/Images/user7.png");
+            width: 147px;
+            height: 147px;
+            top: 35px;
+            left: 20%;
+        }
+    }
+    &--fixed {
+        position: absolute;
+        width: 100%;
+        height: 360px;
+        left: 55%;
+        &-body {
+            position: relative;
+        }
+    }
+    &--images--general {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

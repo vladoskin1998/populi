@@ -1,23 +1,20 @@
 import { useEffect } from "react";
 import "../../style/main/letter.scss"
 
-export const Letter = ({ isAnimation }: { isAnimation: boolean }) => {
+export const Letter = () => {
 
     useEffect(() => {
         const letterElement = document.querySelector('.letter');
-   
-        if (isAnimation) {
-          setTimeout(() => {
+
+        setTimeout(() => {
             letterElement?.classList.add('hidden');
-          }, 3000);
-        }
-        else{
-          letterElement?.classList.add('hidden--withot-animation');
-        }
-      }, []);
+        }, 3000);
+    }
+
+        , []);
 
     return (
-        <div className='letter' style={{ position: 'relative' }}>
+        <div className='circle__loader-logo' style={{ position: 'relative' }}>
             <div style={{ position: 'absolute', left: 0, top: 0 }}>
                 <svg style={{ width: '70px', height: '70px' }} xmlns="http://www.w3.org/2000/svg" width="100" height="86" viewBox="0 0 100 86" fill="none">
                     <mask id="mask0_594_6588" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="86">
@@ -43,7 +40,7 @@ export const Letter = ({ isAnimation }: { isAnimation: boolean }) => {
                     </defs>
                 </svg>
             </div>
-            <div className='letter--rect' />
+            <div className='circle__loader-logo--rect' />
             <div style={{ position: 'absolute', left: 0, top: 0 }}>
                 <svg style={{ width: '70px', height: '70px' }} xmlns="http://www.w3.org/2000/svg" width="100" height="86" viewBox="0 0 100 86" fill="none">
                     <mask id="path-1-inside-1_594_6596" fill="white">

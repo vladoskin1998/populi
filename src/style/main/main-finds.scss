@@ -1,0 +1,99 @@
+.main__finds {
+    position: relative;
+    padding-bottom: 424px;
+    padding-top: 181px;
+    .find-block {
+        max-width: 100vw;
+        width: 100%;
+    }
+    .main__categories-title {
+        padding-bottom: 0;
+    }
+
+    &--body {
+        display: flex;
+        &-1 {
+            position: relative;
+            flex: 1;
+        }
+        &-2 {
+            width: 800px;
+        }
+    }
+    &--images {
+        position: relative;
+        &--general {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &-1 {
+            background-image: url("../../../public/Images/event1.png");
+            width: 138px;
+            height: 150px;
+            top: 200px;
+            left: 84%;
+        }
+        &-2 {
+            background-image: url("../../../public/Images/event2.png");
+            width: 102px;
+            height: 111px;      
+            top: 330px;
+            left: 47%;
+        }
+        &-3 {
+            background-image: url("../../../public/Images/event3.png");
+            width: 68px;
+            height: 74px;
+            top: 436px;
+            left: 83%;
+        }
+
+        &-4 {
+            background-image: url("../../../public/Images/burg1.png");
+            width: 190px;
+            height: 190px;
+            top: 69px;
+            left: 9%;
+        }
+        &-5 {
+            background-image: url("../../../public/Images/burg2.png");
+            width: 88px;
+            height: 96px;
+            top: 226px;
+            left: 1%;
+        }
+        &-6 {
+            background-image: url("../../../public/Images/burg3.png");
+            width: 163px;
+            height: 45px;
+            top: 270px;
+            left: 14%;
+        }
+        &-7 {
+            background-image: url("../../../public/Images/burg4.png");
+            width: 156px;
+            height: 169px;
+            top: 329px;
+            left: 5%;
+        }
+        &-8 {
+            background-image: url("../../../public/Images/burg5.png");
+            width: 136px;
+            height: 38px;
+            top: 348px;
+            left: 19%;
+        }
+    }
+    &--fixed{
+        position: absolute;
+        width: 100%;
+        height: 360px;
+        top: 181px;
+        left: 65%;
+        &-body{
+            position: relative;
+     
+        }
+    }
+}
