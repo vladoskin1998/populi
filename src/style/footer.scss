@@ -1,6 +1,7 @@
 @import "var.scss";
 
 .footer {
+    z-index: 15;
     &__body {
         display: grid;
         grid-template-columns: auto 1fr;

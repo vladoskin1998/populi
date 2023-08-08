@@ -126,6 +126,11 @@
         }
     }
     &__modal {
+        z-index: 5;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         display: flex;
         width: 831px;
         height: 442px;
@@ -135,6 +140,9 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+        border-radius: 24px;
+        background:  #FFF;
+        text-align: center;
         &-parag {
             font-size: 16px;
             font-style: normal;

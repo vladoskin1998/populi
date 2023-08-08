@@ -38,8 +38,8 @@
         left: 24%;
     }
     &-xy4 {
-        top: 50%;
-        left: 76%;
+        top: 77%;
+        left: 9%;
     }
     &-xy5 {
         top: 20%;
@@ -60,10 +60,9 @@
 }
 //opacity: 0;
 
-
 @keyframes points1__scale {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
         opacity: 1;
@@ -75,7 +74,8 @@
 }
 
 @keyframes points2__scale {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0;
     }
     50% {

@@ -87,6 +87,33 @@
             max-width: 500px;
         }
     }
+    &__cookies {
+        z-index: 12;
+        display: flex;
+        max-width: 1200px;
+        margin: 20px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 8px;
+        background: #fff;
+        padding: 12px 16px;
+        column-gap: 12px;
+        align-items: flex-start;
+        p {
+            opacity: 0.7;
+            flex: 1 0 0;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16.8px;
+        }
+        span{
+            text-decoration-line: underline;
+            cursor: pointer;
+        }
+    }
 }
 
 .main--general--titles {
@@ -101,5 +128,4 @@
         background-position: left;
         background-size: 0 95%;
     }
-
 }
