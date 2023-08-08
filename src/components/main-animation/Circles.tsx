@@ -19,7 +19,7 @@ export const Circles = () => {
 
       const springPropsCircle = useSpring({
         from: { r: 0, opacity: 0 },
-        to: { r: 310,  opacity: 1 },
+        to: { r: 290,  opacity: 0.9 },
         config: { duration: 1500 }, // Настройки анимации (длительность, замедление и т.д.)
       });
 

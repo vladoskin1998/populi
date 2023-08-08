@@ -1,9 +1,7 @@
-
 const SiteImage = () => {
   return (
-    
     <div className='site--line'>
-        <div className='site--line-img'></div>
+      <div className='site--line-img'></div>
     </div>
   )
 }

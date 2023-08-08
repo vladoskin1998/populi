@@ -3,7 +3,7 @@ import '../../style/main/main-footer.scss'
 
 const MainFooter = () => {
   return (
-    <div id='MainFooter' className='main__footer'></div>
+    <div id='MainFooter' className='main__footer' />
   )
 }
 

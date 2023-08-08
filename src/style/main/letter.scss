@@ -24,19 +24,3 @@
         animation: fill__letter__bg 3s linear;
     }
 }
-
-@keyframes letter__fade__out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.hidden {
-    animation: letter__fade__out 1s forwards 1s;
-}
-.hidden--withot-animation {
-    opacity: 0;
-}

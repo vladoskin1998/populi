@@ -1,44 +1,63 @@
-import { useEffect } from 'react'
+import MainTitle from './MainTitle';
+import { useEffect, useState } from "react"
+
+import { useTranslation } from 'react-i18next';
+
 
 const MainInvite = () => {
+    const { t } = useTranslation();
+    const [isVisiable, setIsVisiable] = useState(true);
+    // console.log("isVisiableMainInvite--->", isVisiable);
 
-    // useEffect(() => {
-    //     const main__invitetitle = document.querySelectorAll('.main__invite-title');
-    //     if (isAnimation) {
-    //         setTimeout(() => {
-    //             main__invitetitle.forEach((element) => {
-    //                 element?.classList.add('title--animation');
-    //             })
-    //         }, 4000);
-    //     }
-    //     else {
-    //         main__invitetitle.forEach((element) => {
-    //             element?.classList.add('title--animation');
-    //         })
-    //     }
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.querySelector('#MainInvite');
+            if (!element) return;
 
-    // }, [])
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight) {
+                if (isVisiable) return
+                setIsVisiable(true);
+            }
+            else {
+                setIsVisiable(false);
+            }
+
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
     return (
         <div className='container__wraper'>
-            <div className='main__invite'>
+            <div className='main__invite' id="MainInvite">
                 <h4 className='main--uptitle' >
-                    Best moments and highlights
+                    {t('main.t1')}
                 </h4>
-                <p className='main__invite-title' style={{ fontSize: "70px" }}>
-                    Invite, meet, find
-                </p>
+                <h2 className='main__invite-title' style={{ fontSize: "70px" }}>
+                    <MainTitle trigger={isVisiable}>
+                        {t('main.t2')}
+                    </MainTitle >
+                </h2>
                 <h2 className='main__invite-title' style={{ fontSize: "80px" }}>
-                    create
+                    <MainTitle trigger={isVisiable}>
+                        {t('main.t3')}
+                    </MainTitle>
                 </h2>
                 <h2 className='main__invite-title' style={{ fontSize: "90px" }}>
-                    events!
+                    <MainTitle trigger={isVisiable}>
+                        {t('main.t4')}
+                    </MainTitle>
                 </h2>
-                <button className='main__invite-button button__grad'>I want to know!</button>
-                <p className='main__invite-parag'>Meet new people, share experiences, photos, and videos. Play games, enjoy conversations, volunteer, travel, or just spend time outdoors. Even from a distance! Get closer to each other with Populi.</p>
-            </div>
-        </div>
+                <button className='main__invite-button button__grad'>
+                    {t('main.t5')}
+                </button>
+                <p className='main__invite-parag'>
+                    {t('main.t6')}
+                </p>
+            </div >
+        </div >
     )
 }
 

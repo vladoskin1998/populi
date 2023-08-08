@@ -1,22 +1,50 @@
 import '../../style/main/main-different.scss'
+import MainTitle from './MainTitle';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const MainDifferent = () => {
-    return (
 
+    const { t } = useTranslation();
+    const [isVisiable, setIsVisiable] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.querySelector('#MainDifferent');
+            if (!element) return;
+
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                setIsVisiable(true);
+            }
+
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+    return (
         <div className='main__diff' id='MainDifferent'>
             <div className='container__wraper'>
                 <div className="main__finds--body">
                     <div className="main__finds--body-1">
-                        <h4 className='main--uptitle'>No time to be bored</h4>
+                        <h4 className='main--uptitle'>{t('main.t15')}</h4>
                         <div className='main__categories-title'>
-                            <p className='title main__categories-title-text' style={{ fontSize: "40px" }}> Different people,
+                            <p className='title main__categories-title-text' style={{ fontSize: "40px" }}>
+
+                                {t('main.t16')}
+
                             </p>
-                            <p className='title main__categories-title-text' style={{ fontSize: "50px" }}> same values
+                            <p className='title main__categories-title-text' style={{ fontSize: "50px" }}>
+
+                                {t('main.t17')}
+
                             </p>
                         </div>
-
                         <p className='main__categories-parag'>
-                            Easily find people, who share your interests, nearby or all around the globe. Everyone in Populi is open to communication, new acquaintances, and experience.
+                            {t('main.t18')}
                         </p>
                         <div className='main__diff-img'>
                             <div className='main__diff-img-6  main__finds--images--general' />

@@ -7,19 +7,13 @@ const Points = () => {
         const points1 = document.querySelectorAll('.points_point--group1');
         const points2 = document.querySelectorAll('.points_point--group2');
 
-        console.log("points1", points1);
-
-
         setTimeout(() => {
             points1.forEach(
                 e => e?.classList.add('circle__point1__animation')
             )
-            // points1?.classList.add('circle__point1__animation');
-
             points2.forEach(
                 e => e?.classList.add('circle__point2__animation')
             )
-            //  points2?.classList.add('circle__point2__animation');
         }, 4000);
     }, []);
 

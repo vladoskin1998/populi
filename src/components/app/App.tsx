@@ -1,13 +1,9 @@
 import { useEffect, useRef, useState, Suspense, lazy } from 'react'
 import Loader from '../loader.tsx/Loader'
-
-
-
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import "../../style/main/main.scss"
-import "../../style/main/animation.scss"
 import "../../style/main-tp/main-tp.scss"
 import MainTP from '../main-tablet-phone/MainTP'
 import { I18nextProvider } from 'react-i18next';

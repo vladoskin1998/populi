@@ -1,30 +1,30 @@
 {
-    "header":{
-       "t1": "Home | Our categories | Create events | New friends | About Us",
-       "t2": "Applications"
+    "header": {
+        "t1": "Home | Our categories | Create events | New friends | About Us",
+        "t2": "Applications"
     },
-    "footer":{
+    "footer": {
         "t1": "Home | About | Contacts | Privacy policy | Terms Of Use"
     },
     "about": {
         "t1": "About Populi",
         "t2": "Populi",
-        "t3":  "is a pocket event-based coffeehouse. We created Populi to connect people who share common interests, and to provide the ",
+        "t3": "is a pocket event-based coffeehouse. We created Populi to connect people who share common interests, and to provide the ",
         "t4": "best possible communication experience.",
-        "t5":  "We made Populi not just another meeting app but a powerful tool for creating various events based on people's interests and personalities. Our engineers and designers work constantly to improve Populi customers' experience, and we would be glad to see your feedback.",
-        "t6":  "Your portable events manager",
-        "t7":  "Populi is an application that will make organizing meetings and finding events more convenient and efficient. Whether you're looking to meet up with friends or join exciting events, Populi will help you turn your ideas into reality. Don't miss the opportunity to be connected with those who share your interests!",
-        "t8":  "We believe that Populi will become your indispensable tool for organizing meetings and events. It will help you save time, coordinate attendees, facilitate scheduling and take part in interesting activities. Don't miss the opportunity to create unforgettable meetings with Populi!"
+        "t5": "We made Populi not just another meeting app but a powerful tool for creating various events based on people's interests and personalities. Our engineers and designers work constantly to improve Populi customers' experience, and we would be glad to see your feedback.",
+        "t6": "Your portable events manager",
+        "t7": "Populi is an application that will make organizing meetings and finding events more convenient and efficient. Whether you're looking to meet up with friends or join exciting events, Populi will help you turn your ideas into reality. Don't miss the opportunity to be connected with those who share your interests!",
+        "t8": "We believe that Populi will become your indispensable tool for organizing meetings and events. It will help you save time, coordinate attendees, facilitate scheduling and take part in interesting activities. Don't miss the opportunity to create unforgettable meetings with Populi!"
     },
     "contacts": {
         "t1": "Look around you",
         "t2": "Everything is changing.",
         "t3": "What if the time has come for you to change? Starting a collaboration is easy! Order a free",
-         "t4": "consultation or call back. We are always in touch and happy to cooperate with you",
-         "t5": "If you have questions pleasecontact us",
-         "t6": "Fill in the fields and our specialists will quickly contact you to resolve your issues",
-         "t7": "Name",
-         "t8": "Email",
+        "t4": "consultation or call back. We are always in touch and happy to cooperate with you",
+        "t5": "If you have questions pleasecontact us",
+        "t6": "Fill in the fields and our specialists will quickly contact you to resolve your issues",
+        "t7": "Name",
+        "t8": "Email",
         "t9": "Question",
         "t10": "Send message",
         "t11": "HEAD OFFICE:",
@@ -32,21 +32,28 @@
         "t13": "Damietta Egypt",
         "t14": "PHONES:",
         "t15": "WRITE US:"
-        
     },
     "agreement": {
-        "t1":"Properties for Sale"
-    
+        "t1": "Properties for Sale"
     },
     "main": {
-        "title": "Reviews",
-        "main": "Happy Clients",
-        "foot": "Thanks to you we are becoming better!",
-        "viewmore": "View more",
-        "leavereview": "Leave a review",
-        "name": "Your name",
-        "comment":"Your review",
-        "alert-name": "Field name is empty",
-        "alert-comment":"Review field is empty"
+        "t1": "Best moments and highlights",
+        "t2": "Invite, meet, find",
+        "t3": "create",
+        "t4": "events!",
+        "t5": "I wont to know!",
+        "t6": "Meet new people, share experiences, photos, and videos. Play games, enjoy conversations, volunteer, travel, or just spend time outdoors. Even from a distance! Get closer to each other with Populi.",
+        "t7": "How hard can it be",
+        "t8": "Numbers of events",
+        "t9": "by categories",
+        "t10": "Browse hundreds of other people's events in a few taps. Sort by categories, location, time, and other filters.",
+        "t11": "Meetings you choose",
+        "t12": "Can't find event",
+        "t13": "you want?",
+        "t14": "Create your own and invite friends or strangers, whoever you want! Use numerous but easy-to-use settings to create your perfect event!",
+        "t15": "No time to be bored",
+        "t16": "Different people,",
+        "t17": "same values",
+        "t18": "Easily find people, who share your interests, nearby or all around the globe. Everyone in Populi is open to communication, new acquaintances, and experience."
     }
-  }
+}

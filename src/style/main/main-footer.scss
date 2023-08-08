@@ -1,16 +1,16 @@
 @import "../var.scss";
 
-.main__footer{
+.main__footer {
     height: 100vh;
-    &-phone{
+    &-phone {
         position: absolute;
         top: 129px;
         width: 954px;
         height: 320px;
         left: -337px;
-        &-wrap{
+        &-wrap {
             position: relative;
-            &-body{
+            &-body {
                 border-radius: 30px;
                 background: $gradient1;
                 position: absolute;
@@ -18,7 +18,44 @@
                 transform: translateX(-50%);
             }
         }
-    }   
-    
-}
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        padding: 50px 57px 0 50px;
+        position: relative;
+        h3 {
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 50px; /* 166.667% */
+            letter-spacing: 1.5px;
+        }
+        p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 171.429% */
+            letter-spacing: 0.7px;
+        }
 
+        &-market {
+            position: relative;
+        }
+        &-lable {
+            margin-top: 36px;
+        }
+        &-left {
+            position: absolute;
+            top: 99%;
+            left: 16%;
+        }
+        &-right {
+            position: absolute;
+            top: 99%;
+            left: 69%;
+        }
+    }
+}
