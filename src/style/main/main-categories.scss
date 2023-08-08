@@ -1,7 +1,7 @@
 @import "../var.scss";
 
 .main__categories {
-
+    z-index: 3;
     &--body{
         display: flex;
         &-1{

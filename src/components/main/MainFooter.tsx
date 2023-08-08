@@ -1,8 +1,9 @@
 import React from 'react'
+import '../../style/main/main-footer.scss'
 
 const MainFooter = () => {
   return (
-    <div id='MainFooter' style={{height: "70vh"}}>MainFooter</div>
+    <div id='MainFooter' className='main__footer'></div>
   )
 }
 

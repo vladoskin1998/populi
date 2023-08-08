@@ -4,18 +4,24 @@
 import { useEffect, useState } from 'react';
 import Points from './Points'
 import "../../style/main/circle.scss"
-import { useSpring, animated, config } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 
 
 export const Circles = () => {
-    const bezierConfig = config.default
 
     const springProps = useSpring({
-        from: { marginLeft: 0,   opacity: 0.8 },
-        to: { marginLeft: ((window.innerWidth - 960) / 2) + 960 - 350 , opacity: 1  },
-        config: { duration: 1000 }, // Используем настроенную кривую Безье
-    });
+        from: { marginLeft: 0, marginTop: 0},
+        to: async (next) => {
+          await next({ marginLeft: ((window.innerWidth - 960) / 2) + 960 - 350, marginTop: 0 });
+        },
+        config: { duration: 1700 },
+      });
 
+      const springPropsCircle = useSpring({
+        from: { r: 0, opacity: 0 },
+        to: { r: 310,  opacity: 1 },
+        config: { duration: 1500 }, // Настройки анимации (длительность, замедление и т.д.)
+      });
 
     return (
         <div className='circle'>
@@ -26,7 +32,7 @@ export const Circles = () => {
                         <circle id="circle1" opacity="0.1" cx="724" cy="724" r="723" stroke="url(#paint0_linear_7_55)" stroke-width="2" stroke-dasharray="30 30" />
                         <circle id="circle2" opacity="0.3" cx="724" cy="724" r="547" stroke="url(#paint1_linear_7_55)" stroke-width="2" stroke-dasharray="20 20" />
                         <circle id="circle3" opacity="0.6" cx="724" cy="724" r="409" stroke="url(#paint2_linear_7_55)" stroke-width="2" stroke-dasharray="10 10" />
-                        <circle id="circle-gradient" cx="724" cy="724" r="310" fill="url(#paint3_linear_7_55)" />
+                        <animated.circle id="circle-gradient" cx="724" cy="724" opacity={springPropsCircle.opacity} r={springPropsCircle.r} fill="url(#paint3_linear_7_55)" />
                         <defs>
                             <linearGradient id="paint0_linear_7_55" x1="0" y1="0" x2="1626.62" y2="1207.35" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#0014FF" />

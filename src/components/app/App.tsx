@@ -12,8 +12,8 @@ import "../../style/main-tp/main-tp.scss"
 import MainTP from '../main-tablet-phone/MainTP'
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/i18n';
+import Main from '../main/Main'
 
-const Main = lazy(() => import('../main/Main'));
 const About = lazy(() => import('../about/About'));
 const Contacts = lazy(() => import('../contacts/Contacts'));
 const Agreement = lazy(() => import('../agreement/Agreement'));
@@ -65,7 +65,7 @@ const App = () => {
                         <Routes>
                             <Route path="/" element={
                                 true
-                                    ? <Main isAnimation={isAnimation} />
+                                    ? <Main />
                                     : <MainTP />
                             } />
                             <Route path="/about" element={

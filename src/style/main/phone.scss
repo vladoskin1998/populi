@@ -1,39 +1,49 @@
 .phone {
     position: fixed;
-    top: 91px;
-    right: 150px;
-    width: 282px;
-    height: 574px;
-    z-index: 5;
-    &--circle {
-        position: absolute;
-        top: calc(-91px + 50vh);
-        left: calc(-1 * (100vw / 2 + 470px));
-        transform: translate(50%, -50%);
-        z-index: 3;
-    }
+    top: 93px;
+    right: 30%;
+    z-index: 10;
     &__screen {
         position: absolute;
         left: 0;
         top: 0;
-        z-index: 3;
+        z-index: 4;
         width: 307px;
         height: 624px;
         background-repeat: no-repeat;
         background-image: url("../../../public/Images/phone.png");
     }
+    &__screenshot{
+        z-index: 3;
+        position: absolute;
+        top: 6px;
+        left: 11px;
+        height: 560px;
+        max-width: 262px;
+        width: 262px;
+    }
     &__block {
         position: absolute;
         bottom: 0;
     }
+    &-android{
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: none;
+        width: 307px;
+        height: 573px;
+   
+        z-index: 2;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../../../public/Images/android.png");
+    }
 }
 
-.phone__anim_spr {
-    position: fixed;
-    top: 93px;
-    right: 30%;
-    z-index: 10;
-}
+
+
+
 
 .site--line {
     position: absolute;

@@ -1,0 +1,24 @@
+@import "../var.scss";
+
+.main__footer{
+    height: 100vh;
+    &-phone{
+        position: absolute;
+        top: 129px;
+        width: 954px;
+        height: 320px;
+        left: -337px;
+        &-wrap{
+            position: relative;
+            &-body{
+                border-radius: 30px;
+                background: $gradient1;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }   
+    
+}
+
