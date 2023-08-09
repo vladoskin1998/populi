@@ -1,17 +1,4 @@
 @media only screen and (max-width: 1080px) {
-    .circle4 {
-        opacity: 1;
-        r: 210;
-    }
-    .circle {
-        width: 665px;
-        height: 665px;
-        //    &__svg{
-        //     width: 665px;
-        //     height: 665px;
-        //    }
-    }
-
     .main {
         &__invite {
             font-style: normal;
@@ -59,6 +46,37 @@
                     }
                 }
             }
+        }
+    }
+
+    .main__tp__circle {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .main__tp__phone {
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../../../public/Images/phone.png");
+        width: 206px;
+        height: 420px;
+        z-index: 6;
+        overflow: hidden;
+        padding: 8px;
+        &-site{
+            z-index: 4;
+            background-image: url("../../../public/Images/site.png");
+            top: 20px;
+            right: 28px;
+            height: 411px;
+            width: 190px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
         }
     }
 }

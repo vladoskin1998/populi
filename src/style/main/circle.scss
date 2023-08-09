@@ -46,3 +46,28 @@
     opacity: 0;
 }
 
+@media only screen and (max-width: 1080px) {
+    .circle{
+        position: absolute;
+        width: 759px;
+        height: 759px;
+        top: 230px;
+        left: initial;
+        right: -650px;
+        &>div{
+            margin-left: 0 !important;
+            width: 759px;
+            height: 759px;
+        }
+        .poitns{
+            width: 759px;
+            height: 759px;
+        }
+        svg{
+            width: 759px;
+            height: 759px;
+        }
+    }
+}
+
+// @media only screen and (max-width: 665px) {}

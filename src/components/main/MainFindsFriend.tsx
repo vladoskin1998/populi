@@ -33,12 +33,12 @@ const MainFindsFriend = () => {
                             {t('main.t11')}
                         </h4>
                         <div className='main__categories-title'>
-                            <p className='title main__categories-title-text' style={{ fontSize: "40px" }}>
+                            <p className='title main__categories-title-text' >
                           
                                     {t('main.t12')}
                      
                             </p>
-                            <p className='title main__categories-title-text' style={{ fontSize: "50px" }}>
+                            <p className='title main__categories-title-text'>
                             
                                     {t('main.t13')}
                             

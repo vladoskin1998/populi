@@ -3,14 +3,22 @@ import { Circles } from '../main-animation/Circles'
 import MainInvite from '../main/MainInvite'
 import MainCategories from '../main/MainCategories'
 import MainFindsFriend from '../main/MainFindsFriend'
+import MainDifferent from '../main/MainDifferent'
+import MainTPFooter from './MainTPFooter'
 
 const MainTP = () => {
-  return (
+  return (  
     <div>
-        {/* <Circles isAnimation ={true}/> */}
+      <div className='main__tp__circle'>
+        <Circles />
+        <div className='main__tp__phone' />
+        <div className='main__tp__phone-site'/>
         <MainInvite />
-        <MainCategories />
-        <MainFindsFriend />
+      </div>
+      <MainCategories />
+      <MainFindsFriend />
+      <MainDifferent />
+      <MainTPFooter />
     </div>
   )
 }

@@ -32,15 +32,11 @@ const MainDifferent = () => {
                     <div className="main__finds--body-1">
                         <h4 className='main--uptitle'>{t('main.t15')}</h4>
                         <div className='main__categories-title'>
-                            <p className='title main__categories-title-text' style={{ fontSize: "40px" }}>
-
+                            <p className='title main__categories-title-text main__categories-title-text-1' >
                                 {t('main.t16')}
-
                             </p>
-                            <p className='title main__categories-title-text' style={{ fontSize: "50px" }}>
-
+                            <p className='title main__categories-title-text main__categories-title-text-2'>
                                 {t('main.t17')}
-
                             </p>
                         </div>
                         <p className='main__categories-parag'>
