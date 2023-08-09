@@ -60,7 +60,7 @@ const App = () => {
                     <div className='app__content'>
                         <Routes>
                             <Route path="/" element={
-                                true
+                                false
                                     ? <Main />
                                     : <MainTP />
                             } />

@@ -71,6 +71,15 @@
             font-weight: 900;
             line-height: normal;
             margin-left: 57px;
+            &-1{
+                font-size: 70px;
+            }
+            &-2{
+                font-size: 80px;
+            }
+            &-3{
+                font-size: 80px;
+            }
         }
         &-button {
             display: flex;

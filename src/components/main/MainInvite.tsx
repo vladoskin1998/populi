@@ -35,17 +35,17 @@ const MainInvite = () => {
                 <h4 className='main--uptitle' >
                     {t('main.t1')}
                 </h4>
-                <h2 className='main__invite-title' style={{ fontSize: "70px" }}>
+                <h2 className='main__invite-title main__invite-title-1'>
                     <MainTitle trigger={isVisiable}>
                         {t('main.t2')}
                     </MainTitle >
                 </h2>
-                <h2 className='main__invite-title' style={{ fontSize: "80px" }}>
+                <h2 className='main__invite-title' >
                     <MainTitle trigger={isVisiable}>
                         {t('main.t3')}
                     </MainTitle>
                 </h2>
-                <h2 className='main__invite-title' style={{ fontSize: "90px" }}>
+                <h2 className='main__invite-title' >
                     <MainTitle trigger={isVisiable}>
                         {t('main.t4')}
                     </MainTitle>

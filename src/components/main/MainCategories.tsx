@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import '../../style/main/main-categories.scss'
 import MainTitle from './MainTitle';
 import { useTranslation } from 'react-i18next';
+import '../../style/main-tp/main-tp.scss'
 
 const MainCategories = () => {
 
@@ -14,12 +15,12 @@ const MainCategories = () => {
                     <div className="main__categories--body-1">
                         <h4 className='main--uptitle'>{t("main.t7")}</h4>
                         <div className='main__categories-title'>
-                            <h3 className='title main__categories-title-text' style={{ fontSize: "40px" }}>
+                            <h3 className='title main__categories-title-text main__categories-title-text-1'>
                            
                                     {t("main.t8")}
                           
                             </h3>
-                            <h3 className='title main__categories-title-text' style={{ fontSize: "50px" }}>
+                            <h3 className='title main__categories-title-text main__categories-title-text-2'>
                            
                                     {t("main.t9")}
                           

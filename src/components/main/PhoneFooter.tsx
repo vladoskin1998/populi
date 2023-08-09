@@ -7,6 +7,9 @@ import { ArrowLeft, ArrowRight } from '../../svg/Arrow'
 const PhoneFooter = () => {
     return (
         <div className='main__footer-content'>
+            <h4 className='main--uptitle'>
+                The best place for events
+            </h4>
             <div className='main__footer-contentt-market'>
                 <h3>Download</h3>
                 <p>For iOS devices</p>

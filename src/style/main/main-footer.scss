@@ -26,6 +26,11 @@
         color: #ffffff;
         padding: 50px 57px 0 50px;
         position: relative;
+        .main--uptitle{
+            position: absolute;
+            top: -50px;
+            left: 0;
+        }
         h3 {
             font-size: 30px;
             font-style: normal;

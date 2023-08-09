@@ -1,18 +1,67 @@
-// @media only screen and (max-width: 1080px) {
-//     .circle4 {
-//         opacity: 1;
-//         r:210;
-//     }
-//     .circle{
-//         width: 665px;
-//         height: 665px;
-//     //    &__svg{
-//     //     width: 665px;
-//     //     height: 665px;
-//     //    }
-//     }
-// }
+@media only screen and (max-width: 1080px) {
+    .circle4 {
+        opacity: 1;
+        r: 210;
+    }
+    .circle {
+        width: 665px;
+        height: 665px;
+        //    &__svg{
+        //     width: 665px;
+        //     height: 665px;
+        //    }
+    }
 
-// @media only screen and (max-width: 665px) {
+    .main {
+        &__invite {
+            font-style: normal;
+            font-weight: 700;
+            line-height: 55px;
+            padding: 90px 0;
+            &-title {
+                margin-left: 0px;
+                &-1 {
+                    font-size: 40px;
+                }
+                &-2 {
+                    font-size: 50px;
+                }
+                &-3 {
+                    font-size: 60px;
+                }
+            }
+            &-button {
+                margin: 28px 0 0 0;
+            }
+            &-parag {
+                padding-top: 110px;
+                max-width: 100vw;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px; /* 171.429% */
+                letter-spacing: 0.7px;
+            }
+        }
+        &__categories {
+            &-title {
+                padding-left: 0 !important;
 
-// }
+                &-text {
+                    line-height: 45px;
+                    letter-spacing: 2px;
+                    width: fit-content;
+                    &-1 {
+                        font-size: 30px;
+                    }
+                    &-2 {
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 665px) {
+}
