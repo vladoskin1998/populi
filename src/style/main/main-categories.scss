@@ -23,10 +23,10 @@
         white-space: nowrap;
         &-text {
             width: fit-content;
-            &-1{
+            &-1 {
                 font-size: 40px;
             }
-            &-2{
+            &-2 {
                 font-size: 50px;
             }
         }
@@ -83,8 +83,6 @@
     }
 }
 
-
-
 @media only screen and (max-width: 1080px) {
     .main {
         &__categories {
@@ -103,13 +101,13 @@
                     }
                 }
             }
-            &--body-1{
+            &--body-1 {
                 max-width: 100vw;
             }
-            &--body-2{
+            &--body-2 {
                 width: 0px;
             }
-            &-parag{
+            &-parag {
                 padding: 51px 0 0 0;
                 max-width: 100vw;
                 width: 100%;
@@ -119,4 +117,34 @@
 }
 
 @media only screen and (max-width: 665px) {
+    .main__categories {
+        &-1 {
+            display: none;
+        }
+        &-2 {
+            width: 99px;
+            height: 113px;
+            top: 190px;
+            left: 3%
+        }
+        &-3 {
+            width: 175px;
+            height: 163px;
+            top: 150px;
+            left: 20%;
+        }
+        &-4 {
+            width: 117px;
+            height: 130px;
+            top: 314px;
+            left: 4%;
+        
+        }
+        &-5 {
+            width: 111px;
+            height: 125px;
+            top: 298px;
+            left: 26%;
+        }
+    }
 }

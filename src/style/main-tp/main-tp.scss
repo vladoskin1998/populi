@@ -1,3 +1,5 @@
+@import "../var.scss";
+
 @media only screen and (max-width: 1080px) {
     .main {
         &__invite {
@@ -67,7 +69,7 @@
         z-index: 6;
         overflow: hidden;
         padding: 8px;
-        &-site{
+        &-site {
             z-index: 4;
             background-image: url("../../../public/Images/site.png");
             top: 20px;
@@ -79,7 +81,97 @@
             position: absolute;
         }
     }
+    .main__tp_footer {
+        margin-top: 16px;
+        position: relative;
+        border-radius: 30px;
+        background: $gradient1;
+        height: 250px;
+        max-width: 100vw;
+        width: 100%;
+        margin-bottom: 74px;
+        padding: 38px 60px;
+       
+        color: var(--fff, #fff);
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px; /* 192.308% */
+        letter-spacing: 1.3px;
+        &-body{
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+        }
+        &-phone {
+            position: absolute;
+            top: -80px;
+            right: 42px;
+            background-image: url("../../../public/Images/groupphone.png");
+            width: 254px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 360px;
+        }
+    }
 }
 
 @media only screen and (max-width: 665px) {
+    .main {
+        &__invite {
+            padding-top: 400px;
+            padding-bottom: 70px;
+            &-button {
+                margin: 24px 0 0 0;
+            }
+            &-title {
+                font-style: normal;
+                font-weight: 700;
+                line-height: 44px;
+                margin-left: 0px;
+                &-1 {
+                    font-size: 32px;
+                }
+                &-2 {
+                    font-size: 42px;
+                }
+                &-3 {
+                    font-size: 52px;
+                }
+            }
+            &-parag {
+                padding-top: 32px;
+            }
+        }
+    }
+
+    .main__tp__phone {
+        width: 138px;
+        height: 281px;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        &-site {
+            width: 138px;
+            height: 281px;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .main__tp_footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 230px;
+        margin-bottom: 40px;
+        &-phone {
+            position: absolute;
+            top: -225px;
+            left: 50%;
+            transform: translate(-50%,0);
+            width: 176.543px;
+            height: 252px;
+        }
+    }
 }

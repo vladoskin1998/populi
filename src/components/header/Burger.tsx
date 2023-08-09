@@ -15,8 +15,8 @@ const Burger = () => {
             {
                 open ?
                     <div className='header__burger-modal'>
-                        <div className='header__burger-list' onClick={() => setOpen(false)}>
-                            <RouteList />
+                        <div className='header__burger-list' >
+                            <RouteList click={() => setOpen(false)}/>
                         </div>
                         <div  className='header__burger-button'>
                             <ButtonApp />

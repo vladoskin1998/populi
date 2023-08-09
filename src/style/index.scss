@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     color: $color_black;
     overflow-x: hidden;
-    background-image: url('../../public/Images/bgapp.jpg');
+    background-image: url("../../public/Images/bgapp.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -76,14 +76,14 @@ input {
 }
 
 .app {
-    background-color: rgb(238,232,255);
+    background-color: rgb(238, 232, 255);
     min-height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     font-size: 14px;
     background-repeat: no-repeat;
-    &__content{
+    &__content {
         padding-top: 70px;
         flex-grow: 1;
         position: relative;
@@ -118,7 +118,7 @@ input {
     .container__wraper {
         padding: 0 40px;
     }
-    .title{
+    .title {
         font-size: 30px;
     }
 }
@@ -130,7 +130,6 @@ input {
     .container__wraper {
         padding: 0 25px;
     }
-  
 }
 
 @media only screen and (max-width: 665px) {
@@ -140,7 +139,7 @@ input {
     .container__wraper {
         padding: 0 15px;
     }
-    .title{
+    .title {
         font-size: 26px;
     }
 }
@@ -153,33 +152,32 @@ input {
     position: relative;
     overflow: hidden;
     &:before {
-      content: "";
-      position: absolute;
-      height: 150px;
-      width: 50px;
-      background: #ffffff53;
-      left: -50px;
-      top: -40px;
-      transform: rotate(37deg);
-      animation: moveRight 2s ease infinite;
-      opacity: 0.3;
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 50px;
+        background: #ffffff53;
+        left: -50px;
+        top: -40px;
+        transform: rotate(37deg);
+        animation: moveRight 2s ease infinite;
+        opacity: 0.3;
     }
     @keyframes moveRight {
-      0% {
-        left: -50px;
-      }
-      100% {
-        left: 105%;
-      }
+        0% {
+            left: -50px;
+        }
+        100% {
+            left: 105%;
+        }
     }
-  }
-  
-  
-  
-  
-  
+}
 
-
+.modal--out {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
 
 // @media only screen and (max-width: 1280px) {}
 

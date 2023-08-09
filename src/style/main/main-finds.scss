@@ -99,39 +99,39 @@
         }
     }
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////
 @media only screen and (max-width: 1080px) {
     .main__finds {
         padding-top: 91px;
         padding-bottom: 334px;
-        &--body-1{
-            .main__categories-parag{
-                padding: 24px 0 0 0;
-            }
+
+        .main__categories-parag {
+            padding: 24px 0 0 0;
         }
-        &--body-2{
+
+        &--body-2 {
             max-width: 450px;
             width: 100%;
-        
         }
         &--images {
-            position: relative;   
+            position: relative;
             &--general {
                 position: absolute;
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-            
+
             &-1 {
                 top: 278px;
                 left: 64%;
             }
             &-2 {
-          
                 top: 351px;
                 left: 14%;
             }
             &-3 {
+                width: 42px;
+                height: 46px;
                 top: 436px;
                 left: 56%;
             }
@@ -143,7 +143,6 @@
             &-5 {
                 top: 226px;
                 left: -17%;
-            
             }
             &-6 {
                 top: 270px;
@@ -163,12 +162,72 @@
             width: 100%;
             left: 60%;
             top: 90px;
-            &-body{
+            &-body {
                 width: 100%;
             }
         }
     }
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////
 @media only screen and (max-width: 665px) {
+    .main__finds {
+        padding-top: 70px;
+        padding-bottom: 427px;
+        .main__categories-parag {
+            max-width: 100vw;
+            width: 100%;
+        }
+
+        &--images {
+            &-1 {
+                display: none;
+            }
+            &-2 {
+                width: 63px;
+                height: 68px;
+                top: 251px;
+                left: 0%;
+            }
+            &-3 {
+                width: 42px;
+                height: 46px;
+                top: 299px;
+                left: 20%;
+            }
+
+            &-4 {
+                width: 164px;
+                height: 164px;
+                top: 208px;
+                left: -17%;
+            }
+            &-5 {
+                width: 76px;
+                height: 83px;
+                top: 340px;
+                left: -51%;
+            }
+            &-6 {
+                width: 140px;
+                height: 39px;
+                top: 373px;
+                left: -29%;
+            }
+            &-7 {
+                width: 134px;
+                height: 146px;
+                top: 420px;
+                left: -55%;
+            }
+            &-8 {
+                width: 117px;
+                height: 38px;
+                top: 433px;
+                left: -20%;
+            }
+        }
+        &--body-2 {
+            width: 0;
+        }
+    }
 }

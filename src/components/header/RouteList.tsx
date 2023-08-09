@@ -5,27 +5,34 @@ import { scroller } from 'react-scroll';
 
 const mark = ['MainInvite', 'MainCategories', 'MainFindsFriend', 'MainDifferent', 'MainFooter'];
 
-const RouteList = () => {
+const RouteList = ({ click }: { click?: () => void }) => {
     const { t } = useTranslation();
     const route = t("header.t1").split('|');
 
     const [linkClicked, setLinkClicked] = useState(false);
-    const [id,setId] = useState(0)
+    const [id, setId] = useState(0)
 
     const scrollToElement = (index: number) => {
+        console.log('scroll');
+
         scroller.scrollTo(mark[index], {
             duration: 1000,
             delay: 0,
             smooth: 'easeInOutQuart',
         });
+            
+        if (click) {
+            click();
+        }
     };
 
     useEffect(() => {
         if (linkClicked) {
-            scrollToElement(id); 
+            scrollToElement(id);
+
             setLinkClicked(false); // Сбросить флаг после выполнения scrollTo
         }
-    }, [linkClicked,id]);
+    }, [linkClicked, id]);
 
     return (
         <>
@@ -43,7 +50,9 @@ const RouteList = () => {
                         </Link>
                     </li>
                 ))}
+                
             </ul>
+            <div className='modal--out' onClick={()=>click ? click() : ()=>{}}/>
         </>
     );
 };

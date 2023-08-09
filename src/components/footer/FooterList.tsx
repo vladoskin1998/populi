@@ -18,7 +18,7 @@ const FooterList = () => {
     return (
         <ul className='footer__list'>
             {
-                list.map((item:string, index:number) => <li>
+                list.map((item:string, index:number) => <li key={index}>
                     <Link to={url[index]}>
                         {item}
                     </Link>

@@ -12,6 +12,7 @@ const Footer = () => {
                 <div className='footer__body'>
                     <div className='footer__body-list'>
                         <FooterList />
+                        <div className='modal--out' onClick={()=>setOpen(false)}/>
                     </div>
                     <button className='footer__button' onClick={() => setOpen((s) => !s)}>
                         {

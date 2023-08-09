@@ -4,22 +4,40 @@ import { useTranslation } from 'react-i18next';
 import ContactsModal from './ContactsModal';
 
 const ContactsForm = () => {
-
     const { t } = useTranslation();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-
-    const [openModal, setOpenModal] = useState(true)
+    const [openModal, setOpenModal] = useState(false);
 
     const sendMessage = async () => {
-        await setTimeout(() => { }, 2000)
+        try {
+            const response = await fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
+            });
 
-        setName('')
-        setEmail('')
-        setMessage('')
+            if (response.status === 200) {
+                setOpenModal(true);
+                setTimeout(() => {
+                    setOpenModal(false);
+                }, 1000);
+                setName('');
+                setEmail('');
+                setMessage('');
+            } else {
+                alert('Error'); // Показать alert в случае ошибки
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Error'); // Показать alert в случае ошибки
+        }
     }
+
     return (
         <div className='contacts__form'>
             <div className='contacts__form-body'>
@@ -34,7 +52,7 @@ const ContactsForm = () => {
                     <input type="text" className='contacts__form_inputs-b' placeholder={t('contacts.t8')} />
                     <input type="text" className='contacts__form_inputs-c' placeholder={t('contacts.t9')} />
                 </div>
-                <button className='contacts__form-button button__grad'>{t('contacts.t10')}</button>
+                <button onClick={sendMessage} className='contacts__form-button button__grad'>{t('contacts.t10')}</button>
             </div>
             {
                 false ? <ContactsModal /> : <></>

@@ -40,12 +40,12 @@ const MainInvite = () => {
                         {t('main.t2')}
                     </MainTitle >
                 </h2>
-                <h2 className='main__invite-title' >
+                <h2 className='main__invite-title main__invite-title-2' >
                     <MainTitle trigger={isVisiable}>
                         {t('main.t3')}
                     </MainTitle>
                 </h2>
-                <h2 className='main__invite-title' >
+                <h2 className='main__invite-title main__invite-title-3' >
                     <MainTitle trigger={isVisiable}>
                         {t('main.t4')}
                     </MainTitle>

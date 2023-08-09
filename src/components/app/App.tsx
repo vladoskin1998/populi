@@ -9,6 +9,8 @@ import MainTP from '../main-tablet-phone/MainTP'
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/i18n';
 import Main from '../main/Main'
+import { LANGUAGE } from '../../types/enum'
+import { LanguageType } from '../../types/types'
 
 const About = lazy(() => import('../about/About'));
 const Contacts = lazy(() => import('../contacts/Contacts'));
@@ -16,7 +18,8 @@ const Agreement = lazy(() => import('../agreement/Agreement'));
 
 const App = () => {
 
-    const [isAnimation, setAnimation] = useState(true)
+    const [language, setLanguage] = useState(LANGUAGE.EN)
+
     const appRef = useRef<any>(null)
 
 
@@ -46,8 +49,6 @@ const App = () => {
         setTimeout(() => {
             appRef!.current!.style!.background = 'transparent'
         }, 3000)
-
-      
     }, []);
 
 
@@ -56,11 +57,11 @@ const App = () => {
             <Suspense fallback={<Loader />}>
             <I18nextProvider i18n={i18n}>
                 <Router>
-                    <Header />
+                    <Header setLanguage={(s:LanguageType) => setLanguage(s)}/>
                     <div className='app__content'>
                         <Routes>
                             <Route path="/" element={
-                                false
+                                isDesktop
                                     ? <Main />
                                     : <MainTP />
                             } />
@@ -71,7 +72,7 @@ const App = () => {
                                 <Contacts />
                             } />
                             <Route path="/agreement" element={
-                                <Agreement />
+                                <Agreement language={language}/>
                             } />
                         </Routes>
                     </div>

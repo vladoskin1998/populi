@@ -7,8 +7,3 @@ https://www.figma.com/file/cpTFGMGYv39S1UYgyumjlV/populi-(Copy)?type=design&node
 Дополнительные файлы для анимации:
 https://drive.google.com/drive/folders/1-KuursUfCDP_7PIjNyOxm8rax-KN8ZcG?usp=sharing
 
-
-SSH/SFTP
-Host: contacts.design
-User: vlad_chornenkyj
-Pass: 6Py3nh06TXB*

@@ -4,12 +4,9 @@ import LanguageSelect from './LanguageSelect'
 import RouteList from './RouteList'
 import { ButtonApp } from './ButtonApp'
 import Burger from './Burger'
+import { LanguageType } from '../../types/types'
 
-
-const Header = () => {
-
- 
-
+const Header = ({setLanguage}:{setLanguage:(s:LanguageType) => void}) => {
 
     return (
         <nav className='header'>
@@ -24,7 +21,7 @@ const Header = () => {
                     <div className='header__button'>
                         <ButtonApp />
                     </div>
-                    <LanguageSelect />
+                    <LanguageSelect setLanguage={setLanguage}/>
                     <Burger />
                 </div>
             </div>
