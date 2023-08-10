@@ -58,7 +58,7 @@ const App = () => {
             <I18nextProvider i18n={i18n}>
                 <Router>
                     <Header setLanguage={(s:LanguageType) => setLanguage(s)}/>
-                    <div className='app__content'>
+                    <div className='app__content' id="APP__CONTENT">
                         <Routes>
                             <Route path="/" element={
                                 isDesktop

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { scroller } from 'react-scroll';
 
-const mark = ['MainInvite', 'MainCategories', 'MainFindsFriend', 'MainDifferent', 'MainFooter'];
+const mark = ['APP__CONTENT', 'MainCategories', 'MainFindsFriend', 'MainDifferent', 'MainFooter'];
 
 const RouteList = ({ click }: { click?: () => void }) => {
     const { t } = useTranslation();

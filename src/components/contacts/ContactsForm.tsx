@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ContactsInfo from './ContactsInfo'
 import { useTranslation } from 'react-i18next';
 import ContactsModal from './ContactsModal';
+import { DOMAIN } from '../../utils/const';
 
 const ContactsForm = () => {
     const { t } = useTranslation();
@@ -13,7 +14,7 @@ const ContactsForm = () => {
 
     const sendMessage = async () => {
         try {
-            const response = await fetch('/send-email', {
+            const response = await fetch(DOMAIN + '/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,14 +49,29 @@ const ContactsForm = () => {
                     {t('contacts.t6')}
                 </h4>
                 <div className='contacts__form_inputs'>
-                    <input type="text" className='contacts__form_inputs-a' placeholder={t('contacts.t7')} />
-                    <input type="text" className='contacts__form_inputs-b' placeholder={t('contacts.t8')} />
-                    <input type="text" className='contacts__form_inputs-c' placeholder={t('contacts.t9')} />
+                    <input type="text"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        className='contacts__form_inputs-a'
+                        placeholder={t('contacts.t7')}
+                    />
+                    <input type="text"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        className='contacts__form_inputs-b'
+                        placeholder={t('contacts.t8')}
+                    />
+                    <input type="text"
+                        value={message}
+                        onChange={e => setMessage(e.target.value)}
+                        className='contacts__form_inputs-c'
+                        placeholder={t('contacts.t9')}
+                    />
                 </div>
                 <button onClick={sendMessage} className='contacts__form-button button__grad'>{t('contacts.t10')}</button>
             </div>
             {
-                false ? <ContactsModal /> : <></>
+                openModal ? <ContactsModal /> : <></>
             }
             <ContactsInfo />
         </div>

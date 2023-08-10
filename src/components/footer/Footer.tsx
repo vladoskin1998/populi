@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import '../../style/footer.scss'
 import FooterList from './FooterList'
+import { scroller } from 'react-scroll';
 
 const Footer = () => {
 
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='footer'>
-            <div className='container'>
+        <div className='footer' id="FOOTER">
+             <div className='container__wraper'>
                 <div className='footer__body'>
                     <div className='footer__body-list'>
                         <FooterList />
-                        <div className='modal--out' onClick={()=>setOpen(false)}/>
+                        {/* <div className='modal--out' onClick={()=>setOpen(false)}/> */}
                     </div>
                     <button className='footer__button' onClick={() => setOpen((s) => !s)}>
                         {

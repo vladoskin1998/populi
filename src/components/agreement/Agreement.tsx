@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../style/agreement.scss'
 import { useTranslation } from 'react-i18next';
 import { LanguageType } from '../../types/types';
+import { DOMAIN } from '../../utils/const';
 
 const Agreement = ({ language }: { language: LanguageType }) => {
 
@@ -15,7 +16,7 @@ const Agreement = ({ language }: { language: LanguageType }) => {
     }, [])
 
     useEffect(() => {
-        fetch(`/content/${language.toLowerCase()}`)
+        fetch(`${DOMAIN}/content/${language.toLowerCase()}`)
             .then(response => response.text())
             .then(data => {
                 setRules(data);

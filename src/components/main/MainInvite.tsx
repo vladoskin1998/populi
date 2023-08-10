@@ -1,13 +1,25 @@
 import MainTitle from './MainTitle';
 import { useEffect, useState } from "react"
-
+import { scroller } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 
 
 const MainInvite = () => {
     const { t } = useTranslation();
     const [isVisiable, setIsVisiable] = useState(true);
-    // console.log("isVisiableMainInvite--->", isVisiable);
+
+
+    const scrollToElement = () => {
+
+        scroller.scrollTo("FOOTER", {
+            duration: 1000,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+        });
+
+    };
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,7 +62,7 @@ const MainInvite = () => {
                         {t('main.t4')}
                     </MainTitle>
                 </h2>
-                <button className='main__invite-button button__grad'>
+                <button className='main__invite-button button__grad' onClick={scrollToElement}>
                     {t('main.t5')}
                 </button>
                 <p className='main__invite-parag'>
