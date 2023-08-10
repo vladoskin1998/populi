@@ -3,6 +3,7 @@
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
+    z-index: 30;
 }
 
 
@@ -16,6 +17,7 @@
     }
 }
 .circle__loader-logo-body{
+    
     position: absolute;
     top: 50%;
     left:50%;
@@ -65,4 +67,14 @@
 #circle-loader2 {
     animation: rotateminus 150s ease infinite;
     transform-origin: 50% 50%; /* Set the transform origin to the center of the circles */
+}
+
+.loader__bg{
+    background-color: rgb(238, 232, 255);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
