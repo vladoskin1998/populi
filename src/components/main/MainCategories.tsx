@@ -14,6 +14,9 @@ const MainCategories = () => {
     const [refImage, inViewImage] = useInView({
         triggerOnce: true, // Анимация запускается только один раз
     });
+    const [refParag, inViewParag] = useInView({
+        triggerOnce: true, // Анимация запускается только один раз
+    });
     return (
         <div className='container__wraper' ref={ref}>
             <div className={`main__categories`} id='MainCategories'>
@@ -35,7 +38,7 @@ const MainCategories = () => {
                         <div className={`main__categories--general main__categories-3 show__image--general ${ inViewImage ?  'show__image ': ''}`} />
                         <div className={`main__categories--general main__categories-4 show__image--general ${ inViewImage ?  'show__image ': ''}`} />
                         <div className={`main__categories--general main__categories-5 show__image--general ${ inViewImage ?  'show__image ': ''}`}/>
-                        <p className='main__categories-parag'>
+                        <p  ref={refParag} className={`main__categories-parag ${ inViewParag ? "anim__parag" : ""}`}>
                             {t("main.t10")}
                         </p>
                     </div>

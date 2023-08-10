@@ -29,6 +29,7 @@
             position: absolute;
             background-repeat: no-repeat;
             background-size: contain;
+            transition: transform 0.5s;
         }
         &-1 {
             background-image: url("../../../public/Images/event1.png");
@@ -231,3 +232,109 @@
         }
     }
 }
+
+@keyframes rotateToZero-1 {
+    from {
+        transform: rotate(43deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.rotateToZero-1{
+    animation: rotateToZero-1 2s ease forwards;
+}
+
+
+@keyframes rotateToZero-2 {
+    from {
+        transform: rotate(320deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-2 {
+    animation: rotateToZero-2 2s ease forwards;
+}
+
+@keyframes rotateToZero-3 {
+    from {
+        transform: rotate(123deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-3 {
+    animation: rotateToZero-2 2s ease forwards;
+}
+
+@keyframes rotateToZero-4 {
+    from {
+        transform: rotate(43deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.rotateToZero-4 {
+    animation: rotateToZero-4 2s ease forwards;
+}
+
+
+@keyframes rotateToZero-5 {
+    from {
+        transform: rotate(320deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-5 {
+    animation: rotateToZero-5 2s ease forwards;
+}
+
+@keyframes rotateToZero-6 {
+    from {
+        transform: rotate(123deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-6 {
+    animation: rotateToZero-6 4.5s ease forwards;
+}
+
+@keyframes rotateToZero-7 {
+    from {
+        transform: rotate(194deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-7 {
+    animation: rotateToZero-7 3s ease forwards;
+}
+
+
+@keyframes rotateToZero-8 {
+    from {
+        transform: rotate(154deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotateToZero-8 {
+    animation: rotateToZero-8 4s ease forwards;
+}
+

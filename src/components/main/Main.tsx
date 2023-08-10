@@ -31,7 +31,7 @@ const Main = () => {
       </div>
       <Phone setCount={setCount} />
       <SiteImage />
-      <Circles />
+      {/* <Circles /> */}
       <MainCounter count={count} />
       <MainCookie />
     </div>

@@ -9,7 +9,13 @@ const MainDifferent = () => {
         triggerOnce: true, // Анимация запускается только один раз
     });
 
+    const [refImage, inViewImage] = useInView({
+        triggerOnce: true, // Анимация запускается только один раз
+    });
 
+    const [refParag, inViewParag] = useInView({
+        triggerOnce: true, // Анимация запускается только один раз
+    });
     return (
         <div ref={ref} className={`main__diff show__block--general ${ inView ? 'show__block' : ''}`} id='MainDifferent'>
             <div className='container__wraper'>
@@ -26,12 +32,12 @@ const MainDifferent = () => {
                                 {t('main.t17')}
                             </h3>
                         </div>
-                        <p className='main__categories-parag'>
+                        <p  ref={refParag} className={`main__categories-parag ${ inViewParag ? "anim__parag" : ""}`}>
                             {t('main.t18')}
                         </p>
                         <div className='main__diff-img'>
-                            <div className='main__diff-img-6  main__finds--images--general' />
-                            <div className='main__diff-img-7  main__finds--images--general' />
+                            <div className={`main__diff-img-6  main__finds--images--general ${ inViewImage ? 'transforToZero-3': ''}`}  />
+                            <div className={`main__diff-img-7  main__finds--images--general ${ inViewImage ? 'transforToZero-5': ''}`}  />
                         </div>
                         <div className="main__finds--body-2"></div>
                     </div>
@@ -39,11 +45,11 @@ const MainDifferent = () => {
             </div>
             <div className='main__diff--fixed'>
                 <div className='main__diff--fixed-body'>
-                    <div className='main__diff-img-1 main__diff--images--general' />
-                    <div className='main__diff-img-2 main__diff--images--general' />
-                    <div className='main__diff-img-3 main__diff--images--general' />
-                    <div className='main__diff-img-4 main__diff--images--general' />
-                    <div className='main__diff-img-5 main__diff--images--general' />
+                    <div ref={refImage} className={`main__diff-img-1 main__diff--images--general ${ inViewImage ? 'transforToZero-1': ''}`} />
+                    <div className={`main__diff-img-2 main__diff--images--general ${ inViewImage ? 'transforToZero-2': ''}`}  />
+                    <div className={`main__diff-img-3 main__diff--images--general ${ inViewImage ? 'transforToZero-3': ''}`}   />
+                    <div className={`main__diff-img-4 main__diff--images--general ${ inViewImage ? 'transforToZero-4': ''}`}  />
+                    <div className={`main__diff-img-5 main__diff--images--general ${ inViewImage ? 'transforToZero-5': ''}`}  />
                 </div>
             </div>
         </div>

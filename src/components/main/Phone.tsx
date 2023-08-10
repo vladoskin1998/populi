@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSpring, animated, useTransition } from '@react-spring/web'
 import PhoneFooter from './PhoneFooter';
 import '../../style/main/main-footer.scss'
+import { Circles } from '../main-animation/Circles';
 
 const Phone = ({ setCount }: { setCount: (s: string) => void }) => {
 
@@ -113,6 +114,7 @@ const Phone = ({ setCount }: { setCount: (s: string) => void }) => {
 
   return (
       <animated.div id="phone" style={{ ...phoneStyles }} className='phone'>
+        <Circles />
         <animated.div className='phone__screen' id='phone__screen' style={{ ...phoneScreenStyles }} />
         <animated.div className='phone-android' id='phone__screen-android' style={{ ...androidScreenStyles }} />
         {

@@ -35,7 +35,7 @@ const MainInvite = () => {
                 <button className='main__invite-button button__grad' onClick={scrollToElement}>
                     {t('main.t5')}
                 </button>
-                <p className='main__invite-parag'>
+                <p className='main__invite-parag anim__parag'>
                     {t('main.t6')}
                 </p>
             </div >

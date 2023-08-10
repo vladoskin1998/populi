@@ -182,3 +182,70 @@
         }
     }
 }
+
+
+@keyframes transforToZero-1 {
+    from {
+        transform: translate(0, 70% );
+    }
+    to {
+        transform: translate(0, 0% );
+    }
+}
+.transforToZero-1 {
+    animation: transforToZero-1 3s ease forwards;
+}
+
+
+@keyframes transforToZero-2 {
+    from {
+        transform: translate(0, 60% );
+    }
+    to {
+        transform: translate(0, 0% );
+    }
+}
+
+.transforToZero-2 {
+    animation: transforToZero-2 2s ease forwards;
+}
+
+@keyframes transforToZero-3 {
+    from {
+        transform: translate(90%, 0% );
+    }
+    to {
+        transform: translate(0, 0% );
+    }
+}
+
+.transforToZero-3 {
+    animation: transforToZero-3 1s ease forwards;
+}
+
+@keyframes transforToZero-4 {
+    from {
+        transform: translate(0, -80% );
+    }
+    to {
+        transform: translate(0, 0% );
+    }
+}
+
+.transforToZero-4 {
+    animation: transforToZero-4 3s ease forwards;
+}
+
+
+@keyframes transforToZero-5 {
+    from {
+        transform: translate(100%, 0% );
+    }
+    to {
+        transform: translate(0%, 0% );
+    }
+}
+
+.transforToZero-5 {
+    animation: transforToZero-5 2s ease forwards;
+}
