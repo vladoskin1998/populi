@@ -1,6 +1,7 @@
 import Points from './Points'
 import "../../style/main/circle.scss"
 import { useSpring, animated } from '@react-spring/web'
+import { useState, useEffect } from 'react';
 
 
 export const Circles = () => {
@@ -19,9 +20,12 @@ export const Circles = () => {
         config: { duration: 1500 },
     });
 
+
     return (
         <div className='circle'>
-            <animated.div style={springProps} >
+            <animated.div
+                style={springProps}
+            >
                 <div style={{ position: 'relative' }}>
                     <div style={{ position: 'absolute', top: 0, left: 0 }}>
                         <svg className='circle__svg' width="960" height="960" viewBox="0 0 1448 1448" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +53,6 @@ export const Circles = () => {
                             </defs>
                         </svg>
                     </div>
-
                 </div>
 
 
