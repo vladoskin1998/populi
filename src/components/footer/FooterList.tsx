@@ -7,7 +7,7 @@ const url = [
     '/',
     'about',
     'contacts',
-    'agreement',
+    'policy',
     'agreement'
 ]
 

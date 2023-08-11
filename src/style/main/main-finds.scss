@@ -39,7 +39,9 @@
             left: 91%;
         }
         &-2 {
-            background-image: url("../../../public/Images/event2.png");
+            background-image: url("../../../public/Images/event2.jpg");
+            background-size: cover;
+            border-radius: 14px;
             width: 102px;
             height: 111px;
             top: 330px;
@@ -235,75 +237,75 @@
 
 @keyframes rotateToZero-1 {
     from {
-        transform: rotate(43deg);
+        transform: rotate(33deg) translateX(60px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0);
     }
 }
 .rotateToZero-1{
-    animation: rotateToZero-1 2s ease forwards;
+    animation: rotateToZero-1 4s ease forwards;
 }
 
 
 @keyframes rotateToZero-2 {
     from {
-        transform: rotate(320deg);
+        transform: rotate(-30deg) translateX(100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0);
     }
 }
 
 .rotateToZero-2 {
-    animation: rotateToZero-2 2s ease forwards;
+    animation: rotateToZero-2 6s ease forwards;
 }
 
 @keyframes rotateToZero-3 {
     from {
-        transform: rotate(123deg);
+        transform: rotate(-23deg) translateX(100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0);
     }
 }
 
 .rotateToZero-3 {
-    animation: rotateToZero-2 2s ease forwards;
+    animation: rotateToZero-2 5s ease forwards;
 }
 
 @keyframes rotateToZero-4 {
     from {
-        transform: rotate(43deg);
+        transform: rotate(23deg) translateX(-100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg ) translateX(0);
     }
 }
 .rotateToZero-4 {
-    animation: rotateToZero-4 2s ease forwards;
+    animation: rotateToZero-4 6s ease forwards;
 }
 
 
 @keyframes rotateToZero-5 {
     from {
-        transform: rotate(320deg);
+        transform: rotate(-20deg) translateX(-100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0);
     }
 }
 
 .rotateToZero-5 {
-    animation: rotateToZero-5 2s ease forwards;
+    animation: rotateToZero-5 4s ease forwards;
 }
 
 @keyframes rotateToZero-6 {
     from {
-        transform: rotate(123deg);
+        transform: rotate(13deg) translateX(-100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0px);
     }
 }
 
@@ -313,24 +315,24 @@
 
 @keyframes rotateToZero-7 {
     from {
-        transform: rotate(194deg);
+        transform: rotate(33deg) translateX(-100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0);
     }
 }
 
 .rotateToZero-7 {
-    animation: rotateToZero-7 3s ease forwards;
+    animation: rotateToZero-7 5s ease forwards;
 }
 
 
 @keyframes rotateToZero-8 {
     from {
-        transform: rotate(154deg);
+        transform: rotate(14deg) translateX(-100px);
     }
     to {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateX(0px);
     }
 }
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { scroller } from 'react-scroll';
 
-const mark = ['APP__CONTENT', 'MainCategories', 'MainFindsFriend', 'MainDifferent', 'MainFooter'];
+const mark = ['APP__CONTENT', 'MainCategories', 'MainFindsFriend', 'MainDifferent', 'FOOTER'];
 
 const RouteList = ({ click }: { click?: () => void }) => {
     const { t } = useTranslation();
@@ -52,7 +52,7 @@ const RouteList = ({ click }: { click?: () => void }) => {
                 ))}
                 
             </ul>
-            <div className='modal--out' onClick={()=>click ? click() : ()=>{}}/>
+            {/* <div className='modal--out' onClick={()=>click ? click() : ()=>{}}/> */}
         </>
     );
 };

@@ -36,8 +36,8 @@ const MainDifferent = () => {
                             {t('main.t18')}
                         </p>
                         <div className='main__diff-img'>
-                            <div className={`main__diff-img-6  main__finds--images--general ${ inViewImage ? 'transforToZero-3': ''}`}  />
-                            <div className={`main__diff-img-7  main__finds--images--general ${ inViewImage ? 'transforToZero-5': ''}`}  />
+                            <div className={`main__diff-img-6  main__finds--images--general ${ inViewImage ? 'transforToZero-6': ''}`}  />
+                            <div className={`main__diff-img-7  main__finds--images--general ${ inViewImage ? 'transforToZero-7': ''}`}  />
                         </div>
                         <div className="main__finds--body-2"></div>
                     </div>

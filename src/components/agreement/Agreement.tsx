@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { LanguageType } from '../../types/types';
 import { DOMAIN } from '../../utils/const';
 
-const Agreement = ({ language }: { language: LanguageType }) => {
+const Agreement = ({ language, title }: { language: LanguageType, title: 'agreement' | 'policy' }) => {
 
     const { t } = useTranslation();
-    const [rules, setRules] = useState('<></>')
+    const [rules, setRules] = useState('<h1>No text</h1>')
 
     useEffect(() => {
         setTimeout(() => {
@@ -16,7 +16,7 @@ const Agreement = ({ language }: { language: LanguageType }) => {
     }, [])
 
     useEffect(() => {
-        fetch(`${DOMAIN}/content/${language.toLowerCase()}`)
+        fetch(`${DOMAIN}/${title}/${language.toLowerCase()}`)
             .then(response => response.text())
             .then(data => {
                 setRules(data);
@@ -31,7 +31,8 @@ const Agreement = ({ language }: { language: LanguageType }) => {
         <div className='agreement'>
             <div className='container__wraper'>
                 <h3 className='title'>
-                    {t('agreement.t1')}
+
+                    {t(`${title}.t1`)}
                 </h3>
                 <div dangerouslySetInnerHTML={{ __html: rules }} >
 

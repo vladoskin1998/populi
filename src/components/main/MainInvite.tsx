@@ -8,7 +8,7 @@ const MainInvite = () => {
 
     const scrollToElement = () => {
 
-        scroller.scrollTo("FOOTER", {
+        scroller.scrollTo("MainCategories", {
             duration: 1000,
             delay: 0,
             smooth: 'easeInOutQuart',

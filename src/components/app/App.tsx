@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, Suspense, lazy } from 'react'
-import Loader from '../loader.tsx/Loader'
+import Loader from '../loader/Loader'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
@@ -15,15 +15,23 @@ import { LanguageType } from '../../types/types'
 const About = lazy(() => import('../about/About'));
 const Contacts = lazy(() => import('../contacts/Contacts'));
 const Agreement = lazy(() => import('../agreement/Agreement'));
+const NotFound = lazy(() => import('../not-found/NotFound'));
 
 const App = () => {
 
     const [language, setLanguage] = useState(LANGUAGE.EN)
+    const [isDesktop, setIsDesktop] = useState(false);
 
     const appRef = useRef<any>(null)
 
+    const [isLoad, setIsLoad] = useState(true)
 
-    const [isDesktop, setIsDesktop] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoad(false)
+        }, 3500)
+    }, [])
+
 
     useEffect(() => {
         const userAgent = window.navigator.userAgent;
@@ -54,31 +62,41 @@ const App = () => {
 
     return (
         <div className='app'>
-            <Suspense fallback={<Loader />}>
-            <I18nextProvider i18n={i18n}>
-                <Router>
-                    <Header setLanguage={(s:LanguageType) => setLanguage(s)}/>
-                    <div className='app__content' id="APP__CONTENT">
-                        <Routes>
-                            <Route path="/" element={
-                                isDesktop
-                                    ? <Main />
-                                    : <MainTP />
-                            } />
-                            <Route path="/about" element={
-                                <About />
-                            } />
-                            <Route path="/contacts" element={
-                                <Contacts />
-                            } />
-                            <Route path="/agreement" element={
-                                <Agreement language={language}/>
-                            } />
-                        </Routes>
-                    </div>
-                    <Footer />
-                </Router >
-            </I18nextProvider>
+            <Suspense>
+                <I18nextProvider i18n={i18n}>
+                    <Router>
+                        {
+                            isLoad
+                                ? <Loader />
+                                : <> <Header setLanguage={(s: LanguageType) => setLanguage(s)} />
+                                    <div className='app__content' id="APP__CONTENT">
+                                        <Routes>
+                                            <Route path="/" element={
+                                                isDesktop
+                                                    ? <Main />
+                                                    : <MainTP />
+                                            } />
+                                            <Route path="/about" element={
+                                                <About />
+                                            } />
+                                            <Route path="/contacts" element={
+                                                <Contacts />
+                                            } />
+                                            <Route path="/agreement" element={
+                                                <Agreement language={language} title={"agreement"}/>
+                                            } />
+                                              <Route path="/policy" element={
+                                                <Agreement language={language} title={"policy"} />
+                                            } />
+                                            <Route path="*" element={
+                                                <NotFound /> // Подключаем компонент для 404
+                                            } />
+                                        </Routes>
+                                    </div>
+                                    <Footer />
+                                </>}
+                    </Router >
+                </I18nextProvider>
             </Suspense>
         </div >
     )

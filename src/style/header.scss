@@ -1,7 +1,7 @@
 @import "var.scss";
 
 .header {
-    z-index: 20;
+    z-index: 50;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,6 +41,11 @@
     }
     &__select {
         position: relative;
+        &-lang{
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
         &-list {
             top: -20px;
             left: -30px;

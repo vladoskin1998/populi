@@ -179,6 +179,20 @@ input {
     height: 100vh;
 }
 
+.not-found {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.not-found h1 {
+    font-size: 2rem;
+}
+
+.not-found p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
 // @media only screen and (max-width: 1280px) {}
 
 // @media only screen and (max-width: 1080px) {}

@@ -6,7 +6,7 @@ import '../../style/main/main-footer.scss'
 
 const Phone = ({ setCount }: { setCount: (s: string) => void }) => {
 
-  const [phoneStyles, setPhoneStyles] = useSpring(() => ({ transform: 'translate(0px ,0px)', }));
+  const [phoneStyles, setPhoneStyles] = useSpring(() => ({ transform: 'translate(0px ,0px)', config: { duration: 700, easing: (t) => t },  }));
   const [phoneScreenStyles, setPhoneScreenStyles] = useSpring(() => ({ transform: 'translateX(0px)', }));
   const [androidScreenStyles, setAndroidScreenStyles] = useSpring(() => ({ transform: 'translateX(0px)', opacity: 0 }));
   const [springPhoneFooter, setSpringPhoneFooter] = useSpring(() => (

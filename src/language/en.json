@@ -34,7 +34,10 @@
         "t15": "WRITE US:"
     },
     "agreement": {
-        "t1": "Properties for Sale"
+        "t1": "Terms of Use Agreement"
+    },
+    "policy":{
+        "t1": "Privacy Policy"
     },
     "main": {
         "t1": "Best moments and highlights",
@@ -54,6 +57,10 @@
         "t15": "No time to be bored",
         "t16": "Different people,",
         "t17": "same values",
-        "t18": "Easily find people, who share your interests, nearby or all around the globe. Everyone in Populi is open to communication, new acquaintances, and experience."
+        "t18": "Easily find people, who share your interests, nearby or all around the globe. Everyone in Populi is open to communication, new acquaintances, and experience.",
+        "t19": "The best place for events",
+        "t20": "Download",
+        "t21": "For iOS devices",
+        "t22": "For Android devices"
     }
 }
