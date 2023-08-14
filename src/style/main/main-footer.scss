@@ -65,3 +65,29 @@
         }
     }
 }
+
+
+.main__footer-button:hover{
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 50px;
+        background: #ffffff53;
+        left: -50px;
+        top: -40px;
+        transform: rotate(37deg);
+        animation: moveRight 2s ease infinite;
+        opacity: 0.3;
+    }
+    @keyframes moveRight {
+        0% {
+            left: -50px;
+        }
+        100% {
+            left: 105%;
+        }
+    }
+}

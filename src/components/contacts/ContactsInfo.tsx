@@ -27,13 +27,15 @@ const ContactsInfo = () => {
 
                 <div className='contacts__form-info-item'>
                     <div className='contacts__form-info-item-a'>
-                        {t('contacts.t114')}
+                        {t('contacts.t14')}
                     </div>
                     <div className='contacts__form-info-item-b'>
                         <Phone />
                     </div>
-                    <div className='contacts__form-info-item-c'>
-                        {'+1 (850) 987 51 33'}
+                    <div className='contacts__form-info-item-c' >
+                        <a href="tel:+18509875133">
+                             {'+1 (850) 987 51 33'}
+                        </a>
                     </div>
                 </div>
 
@@ -45,7 +47,9 @@ const ContactsInfo = () => {
                         <OpenMail />
                     </div>
                     <div className='contacts__form-info-item-c'>
+                    <a href="mailto:info@site.com">
                         info@site.com
+                    </a>
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, Suspense, lazy } from 'react'
 import Loader from '../loader/Loader'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import "../../style/main/main.scss"

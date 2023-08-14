@@ -12,7 +12,35 @@ const ContactsForm = () => {
     const [message, setMessage] = useState('')
     const [openModal, setOpenModal] = useState(false);
 
+    const [nameError, setNameError] = useState('')
+    const [emailError, setEmailError] = useState('')
+    const [messageError, setMessageError] = useState('')
+
+    const validateEmail = (email:string) => {
+      
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
     const sendMessage = async () => {
+       
+        if (name.trim() === '') {
+            setNameError('Name is required');
+            return;
+        }
+        if (message.trim() === '') {
+            setMessageError('Message is required');
+            return;
+        }
+        if (email.trim() === '') {
+            setEmailError('Email is required');
+            return;
+        }
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email format');
+            return;
+        }
+
         try {
             const response = await fetch(DOMAIN + '/send-email', {
                 method: 'POST',
@@ -30,12 +58,15 @@ const ContactsForm = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setNameError('');
+                setEmailError('');
+                setMessageError('');
             } else {
-                alert('Error'); // Показать alert в случае ошибки
+                alert('Error');
             }
         } catch (error) {
             console.error('Error sending email:', error);
-            alert('Error'); // Показать alert в случае ошибки
+            alert('Error');
         }
     }
 
@@ -51,22 +82,36 @@ const ContactsForm = () => {
                 <div className='contacts__form_inputs'>
                     <input type="text"
                         value={name}
-                        onChange={e => setName(e.target.value)}
+                        onChange={e => {
+                            setName(e.target.value);
+                            setNameError('');
+                        }}
                         className='contacts__form_inputs-a'
                         placeholder={t('contacts.t7')}
                     />
+                    {nameError && <p className="error-message">{nameError}</p>}
+
                     <input type="text"
                         value={email}
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={e => {
+                            setEmail(e.target.value);
+                            setEmailError('');
+                        }}
                         className='contacts__form_inputs-b'
                         placeholder={t('contacts.t8')}
                     />
+                    {emailError && <p className="error-message">{emailError}</p>}
+
                     <input type="text"
                         value={message}
-                        onChange={e => setMessage(e.target.value)}
+                        onChange={e => {
+                            setMessage(e.target.value);
+                            setMessageError('');
+                        }}
                         className='contacts__form_inputs-c'
                         placeholder={t('contacts.t9')}
                     />
+                    {messageError && <p className="error-message">{messageError}</p>}
                 </div>
                 <button onClick={sendMessage} className='contacts__form-button button__grad'>{t('contacts.t10')}</button>
             </div>
@@ -78,4 +123,4 @@ const ContactsForm = () => {
     )
 }
 
-export default ContactsForm
+export default ContactsForm;

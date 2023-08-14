@@ -11,7 +11,6 @@ https://drive.google.com/drive/folders/1-KuursUfCDP_7PIjNyOxm8rax-KN8ZcG?usp=sha
 SSH/SFTP
 Host: contacts.design
 User: vlad_chornenkyj
-Pass: 6Py3nh06TXB*
 
 
 --DEV

@@ -126,7 +126,7 @@
         }
     }
     &__modal {
-        z-index: 5;
+        z-index: 55;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -218,6 +218,20 @@
             br {
                 display: block;
             }
+        }
+    }
+    .contacts__modal{
+        width: 90vw;
+        height: 150px;
+        font-size: 16px;
+        padding: 10px;
+        .title{
+            font-size: 16px; 
+            line-height: 23px;
+        }
+        &-parag{
+            font-size: 12px; 
+            line-height: 13px;
         }
     }
 }

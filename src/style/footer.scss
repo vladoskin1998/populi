@@ -12,6 +12,13 @@
     &__list {
         display: flex;
         column-gap: 40px;
+        li  {
+            cursor: pointer;
+            transition: color 0.5s, color 0.5s;
+            &:hover {
+                color: $color_purp;
+            }
+        }
     } 
     &__button{
         display: none;

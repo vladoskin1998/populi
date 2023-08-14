@@ -17,9 +17,9 @@ const PhoneFooter = () => {
             <div className='main__footer-contentt-market'>
                 <h3>   {t('main.t20')}</h3>
                 <p> {t('main.t21')}</p>
-                <div className='main__footer-content-lable'>
+                <button className='main__footer-content-lable main__footer-button'>
                     <AppStoreWhite />
-                </div>
+                </button>
                 <div className='main__footer-content-left'>
                     <ArrowLeft />
                 </div>
@@ -28,9 +28,9 @@ const PhoneFooter = () => {
             <div className='main__footer-contentt-market'>
                 <h3> {t('main.t20')}</h3>
                 <p> {t('main.t22')}</p>
-                <div className='main__footer-content-lable'>
+                <button className='main__footer-content-lable main__footer-button'>
                     <GooglePlayWhite />
-                </div>
+                </button>
 
                 <div className='main__footer-content-right'>
                     <ArrowRight />
