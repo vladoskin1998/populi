@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useRef,useEffect } from 'react'
 import { LanguageType } from '../../types/types'
 import { LANGUAGES as list } from '../../utils/const'
 import { useTranslation } from 'react-i18next';
-const lang = ['en', 'ua', 'ru']
-
 
 const LanguageSelect = ({setLanguage}:{setLanguage:(s:LanguageType) => void}) => {
 
@@ -21,9 +19,24 @@ const LanguageSelect = ({setLanguage}:{setLanguage:(s:LanguageType) => void}) =>
         i18n.changeLanguage(elem);
     }
 
+    const languageSelectRef = useRef<HTMLDivElement | null>(null); // Указываем тип для languageSelectRef
+
+ 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (languageSelectRef.current && !languageSelectRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
-        <div className='header__select'>
+        <div className='header__select' id="LanguageSelect" ref={languageSelectRef}>
             <button className='header__select-lang' onClick={() => setOpen(true)}>{lang[0]}</button>
             {
                 open

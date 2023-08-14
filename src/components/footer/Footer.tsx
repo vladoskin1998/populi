@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useState ,useRef , useEffect} from 'react'
 import '../../style/footer.scss'
 import FooterList from './FooterList'
-import { scroller } from 'react-scroll';
+
 
 const Footer = () => {
 
     const [open, setOpen] = useState(false)
+
+    const footerModal = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (footerModal.current && !footerModal.current.contains(event.target as Node )) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className='footer' id="FOOTER">
@@ -13,12 +28,11 @@ const Footer = () => {
                 <div className='footer__body'>
                     <div className='footer__body-list'>
                         <FooterList />
-                        {/* <div className='modal--out' onClick={()=>setOpen(false)}/> */}
                     </div>
                     <button className='footer__button' onClick={() => setOpen((s) => !s)}>
                         {
                             open
-                                ? <div className='footer__listmodal'>
+                                ? <div className='footer__listmodal' ref={footerModal}>
                                     <FooterList />
                                 </div>
                                 : <></>
